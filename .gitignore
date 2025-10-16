@@ -1,0 +1,73 @@
+# 🔐 Am I Real Sia - Git Ignore
+
+# Notion Sync - 민감 정보
+notion-sync/.env
+notion-sync/project_snapshot.json
+notion-sync/__pycache__/
+notion-sync/*.log
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+ENV/
+env/
+
+# 환경변수 및 API 키
+.env
+.env.local
+.env.*.local
+secrets/
+
+# ComfyUI
+sia-automation/out/
+sia-automation/export/
+sia-automation/secrets/
+
+# Node.js (랜딩페이지)
+node_modules/
+.next/
+out/
+.cache/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS
+Thumbs.db
+desktop.ini
+
+# NFT / IPFS
+*.ipfs
+ipfs_cache/
+
+# 개인 키 및 지갑
+*.pem
+*.key
+wallet.json
+
+# 로그 파일
+*.log
+logs/
+
+# 임시 파일
+*.tmp
+*.temp
+*.bak
