@@ -1,0 +1,33 @@
+[
+  {
+    "key": "ctrl+shift+n",
+    "command": "workbench.action.tasks.runTask",
+    "args": "🔄 Notion Sync (Private)",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+g",
+    "command": "workbench.action.tasks.runTask",
+    "args": "🚀 Deploy to GitHub"
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "workbench.action.tasks.runTask",
+    "args": "🌐 Open Landing Page (Local)"
+  },
+  {
+    "key": "ctrl+shift+c",
+    "command": "workbench.action.tasks.runTask",
+    "args": "☁️ Open Cloudflare Dashboard"
+  },
+  {
+    "key": "ctrl+shift+p ctrl+shift+n",
+    "command": "workbench.action.tasks.runTask",
+    "args": "📝 Open Notion Page"
+  },
+  {
+    "key": "ctrl+alt+s",
+    "command": "workbench.action.tasks.runTask",
+    "args": "📊 Full Sync (Notion + GitHub)"
+  }
+]

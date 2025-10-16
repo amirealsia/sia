@@ -33,5 +33,62 @@
   // 터미널 인코딩
   "terminal.integrated.env.windows": {
     "PYTHONIOENCODING": "utf-8"
-  }
+  },
+
+  // 자동화 설정
+  "tasks.autoDetect": "on",
+  "task.quickOpen.detail": true,
+  "task.quickOpen.showAll": true,
+
+  // 저장 시 자동 실행
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": "README\\.md$",
+        "cmd": "echo 'README updated - consider syncing to Notion'"
+      }
+    ]
+  },
+
+  // Prettier 설정
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+
+  // Tailwind CSS
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  ],
+
+  // Git Lens
+  "gitlens.currentLine.enabled": true,
+  "gitlens.codeLens.enabled": true,
+
+  // TODO Highlight
+  "todohighlight.keywords": [
+    {
+      "text": "TODO:",
+      "color": "#ff6b6b",
+      "backgroundColor": "transparent"
+    },
+    {
+      "text": "FIXME:",
+      "color": "#ffa500",
+      "backgroundColor": "transparent"
+    },
+    {
+      "text": "NOTE:",
+      "color": "#4fc3f7",
+      "backgroundColor": "transparent"
+    }
+  ]
 }

@@ -1,0 +1,168 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "🔄 Notion Sync (Private)",
+      "type": "shell",
+      "command": "cd notion-sync && python sync_private.py",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new",
+        "showReuseMessage": false
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "🔄 Notion Sync (Public)",
+      "type": "shell",
+      "command": "cd notion-sync && python sync_to_page.py",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "📤 Git Push (Quick)",
+      "type": "shell",
+      "command": "git add . && git commit -m '📝 Quick update: ${input:commitMessage}' && git push",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "🚀 Deploy to GitHub",
+      "type": "shell",
+      "command": "git add . && git status",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "💻 Start Landing Page Dev Server",
+      "type": "shell",
+      "command": "cd landing && npm run dev",
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      },
+      "problemMatcher": {
+        "pattern": {
+          "regexp": "^.*$",
+          "file": 1,
+          "location": 2,
+          "message": 3
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "Starting...",
+          "endsPattern": "Ready"
+        }
+      }
+    },
+    {
+      "label": "🎨 Build Landing Page",
+      "type": "shell",
+      "command": "cd landing && npm run build",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "🔒 Check Git Ignored Files",
+      "type": "shell",
+      "command": "git check-ignore -v README_PRIVATE.md private/ .env",
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "📊 Full Sync (Notion + GitHub)",
+      "dependsOn": [
+        "🔄 Notion Sync (Private)",
+        "🚀 Deploy to GitHub"
+      ],
+      "dependsOrder": "sequence",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "📧 Test Email (Open Browser)",
+      "type": "shell",
+      "command": "start https://mail.google.com",
+      "windows": {
+        "command": "start https://mail.google.com"
+      },
+      "group": "test",
+      "presentation": {
+        "reveal": "silent"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "🌐 Open Landing Page (Local)",
+      "type": "shell",
+      "command": "start http://localhost:3000",
+      "windows": {
+        "command": "start http://localhost:3000"
+      },
+      "group": "test",
+      "presentation": {
+        "reveal": "silent"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "☁️ Open Cloudflare Dashboard",
+      "type": "shell",
+      "command": "start https://dash.cloudflare.com",
+      "windows": {
+        "command": "start https://dash.cloudflare.com"
+      },
+      "group": "test",
+      "presentation": {
+        "reveal": "silent"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "📝 Open Notion Page",
+      "type": "shell",
+      "command": "start https://notion.so/28eca89869388007b5b7ff1e95f9abc9",
+      "windows": {
+        "command": "start https://notion.so/28eca89869388007b5b7ff1e95f9abc9"
+      },
+      "group": "test",
+      "presentation": {
+        "reveal": "silent"
+      },
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "commitMessage",
+      "type": "promptString",
+      "description": "Commit message",
+      "default": "Update files"
+    }
+  ]
+}
