@@ -47,6 +47,7 @@ VS Code를 열면 자동으로 추천 확장프로그램이 표시됩니다.
 |--------|------|------|
 | `Ctrl + Shift + L` | 로컬 랜딩페이지 | http://localhost:3000 |
 | `Ctrl + Shift + C` | Cloudflare 대시보드 | dash.cloudflare.com |
+| `Ctrl + Shift + P` `P` | Cloudflare Pages | Pages 배포 관리 (빠른 접근!) |
 
 ### 📋 Task 실행
 
@@ -117,6 +118,12 @@ Next.js 개발 서버 시작 (http://localhost:3000)
 ```bash
 단축키: Ctrl + Shift + P, Ctrl + Shift + N
 ```
+
+#### `🚀 Open Cloudflare Pages`
+```bash
+단축키: Ctrl + Shift + P, P
+```
+Cloudflare Pages 배포 관리 페이지로 바로 이동!
 
 ---
 
@@ -366,6 +373,7 @@ Ctrl + ` (백틱)
 | `Ctrl + Shift + G` | GitHub 상태 확인 |
 | `Ctrl + Shift + L` | 로컬 페이지 열기 |
 | `Ctrl + Shift + C` | Cloudflare 대시보드 |
+| `Ctrl + Shift + P, P` | Cloudflare Pages (빠른 접근) |
 | `Ctrl + Alt + S` | 전체 동기화 |
 | `Ctrl + Shift + B` | Task 목록 |
 | `Ctrl + Shift + P` | Command Palette |
