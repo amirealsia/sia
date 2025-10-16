@@ -1,8 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaInstagram, FaHeart, FaSun, FaMoon, FaTwitter, FaDiscord, FaTelegram } from 'react-icons/fa';
-import { SiOpensea } from 'react-icons/si';
+import { FaInstagram, FaHeart, FaSun, FaMoon, FaTwitter, FaDiscord, FaTelegram, FaYoutube, FaTiktok, FaPatreon } from 'react-icons/fa';
+import { SiOpensea, SiTiktok } from 'react-icons/si';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTheme } from '@/contexts/ThemeContext';
 import type { Language } from '@/lib/translations';
@@ -580,13 +580,16 @@ export default function Home() {
             </div>
 
             {/* Social Links */}
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                { name: 'OpenSea', url: 'https://opensea.io/collection/amirealsia', icon: SiOpensea, color: 'blue' },
+                { name: 'YouTube', url: '#youtube', icon: FaYoutube, color: 'red' },
+                { name: 'TikTok', url: '#tiktok', icon: SiTiktok, color: 'gray' },
+                { name: 'Patreon', url: '#patreon', icon: FaPatreon, color: 'orange' },
                 { name: 'Instagram', url: 'https://instagram.com/amirealsia', icon: FaInstagram, color: 'pink' },
                 { name: 'Twitter', url: 'https://x.com/amirealsia', icon: FaTwitter, color: 'sky' },
                 { name: 'Discord', url: 'https://discord.gg/jX2uSWNd', icon: FaDiscord, color: 'indigo' },
                 { name: 'Telegram', url: 'https://t.me/amirealsia', icon: FaTelegram, color: 'cyan' },
+                { name: 'OpenSea', url: 'https://opensea.io/collection/amirealsia', icon: SiOpensea, color: 'blue' },
               ].map((social, index) => (
                 <motion.a
                   key={social.name}
@@ -642,17 +645,26 @@ export default function Home() {
                   hello@amirealsia.com
                 </a>
               </p>
-              <div className="flex gap-3 mt-4">
-                <a href="https://instagram.com/amirealsia" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-500 dark:hover:text-rose-400 transition-colors">
+              <div className="flex flex-wrap gap-3 mt-4">
+                <a href="#youtube" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-500 dark:hover:text-rose-400 transition-colors" title="YouTube">
+                  <FaYoutube className="text-xl" />
+                </a>
+                <a href="#tiktok" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-500 dark:hover:text-rose-400 transition-colors" title="TikTok">
+                  <SiTiktok className="text-xl" />
+                </a>
+                <a href="#patreon" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-500 dark:hover:text-rose-400 transition-colors" title="Patreon">
+                  <FaPatreon className="text-xl" />
+                </a>
+                <a href="https://instagram.com/amirealsia" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-500 dark:hover:text-rose-400 transition-colors" title="Instagram">
                   <FaInstagram className="text-xl" />
                 </a>
-                <a href="https://x.com/amirealsia" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-500 dark:hover:text-rose-400 transition-colors">
+                <a href="https://x.com/amirealsia" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-500 dark:hover:text-rose-400 transition-colors" title="Twitter">
                   <FaTwitter className="text-xl" />
                 </a>
-                <a href="https://discord.gg/jX2uSWNd" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-500 dark:hover:text-rose-400 transition-colors">
+                <a href="https://discord.gg/jX2uSWNd" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-500 dark:hover:text-rose-400 transition-colors" title="Discord">
                   <FaDiscord className="text-xl" />
                 </a>
-                <a href="https://t.me/amirealsia" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-500 dark:hover:text-rose-400 transition-colors">
+                <a href="https://t.me/amirealsia" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-500 dark:hover:text-rose-400 transition-colors" title="Telegram">
                   <FaTelegram className="text-xl" />
                 </a>
               </div>
