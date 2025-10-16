@@ -177,26 +177,26 @@ export default function Home() {
           {/* Photo Grid - Polaroid Style */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { time: '🌅 아침', day: 1, mood: '설레는' },
-              { time: '☀️ 점심', day: 1, mood: '호기심 가득' },
-              { time: '🌙 저녁', day: 1, mood: '평화로운' },
-              { time: '🌅 아침', day: 2, mood: '긴장되는' },
-              { time: '☀️ 점심', day: 2, mood: '혼란스러운' },
-              { time: '🌙 저녁', day: 2, mood: '생각하는' },
-              { time: '🌅 아침', day: 3, mood: '희망찬' },
-              { time: '☀️ 점심', day: 3, mood: '웃고있는' },
-              { time: '🌙 저녁', day: 3, mood: '따뜻한' },
+              { time: '🌅 아침', day: 1, mood: '설레는', rotate: 2 },
+              { time: '☀️ 점심', day: 1, mood: '호기심 가득', rotate: -1.5 },
+              { time: '🌙 저녁', day: 1, mood: '평화로운', rotate: 1 },
+              { time: '🌅 아침', day: 2, mood: '긴장되는', rotate: -2 },
+              { time: '☀️ 점심', day: 2, mood: '혼란스러운', rotate: 1.5 },
+              { time: '🌙 저녁', day: 2, mood: '생각하는', rotate: -0.5 },
+              { time: '🌅 아침', day: 3, mood: '희망찬', rotate: 2.5 },
+              { time: '☀️ 점심', day: 3, mood: '웃고있는', rotate: -1 },
+              { time: '🌙 저녁', day: 3, mood: '따뜻한', rotate: 0.5 },
             ].map((photo, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.9, rotate: Math.random() * 6 - 3 }}
-                whileInView={{ opacity: 1, scale: 1, rotate: Math.random() * 4 - 2 }}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ scale: 1.05, rotate: 0, zIndex: 10 }}
                 className="bg-white p-4 rounded-lg shadow-lg hover:shadow-2xl transition-all cursor-pointer"
                 style={{
-                  transform: `rotate(${Math.random() * 4 - 2}deg)`
+                  transform: `rotate(${photo.rotate}deg)`
                 }}
               >
                 {/* Polaroid Photo */}
