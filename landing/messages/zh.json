@@ -1,0 +1,88 @@
+{
+  "hero": {
+    "title": "Am I Real Sia",
+    "subtitle": "我是真实的，还是AI？",
+    "description": "探索现实与人工智能边界的数字偶像SIA的365天AI艺术之旅",
+    "exploreButton": "探索收藏",
+    "mintButton": "铸造NFT"
+  },
+  "about": {
+    "title": "项目介绍",
+    "description": "Am I Real Sia是一个创新的NFT项目，在365天内每天发布一件独特的AI生成艺术作品。每件作品都捕捉了SIA在质疑自己存在时的演变。",
+    "dailyArt": "每日AI艺术",
+    "dailyArtDesc": "365天每日更新",
+    "blockchain": "Solana区块链",
+    "blockchainDesc": "快速且环保",
+    "community": "社区驱动",
+    "communityDesc": "与收藏者共同成长"
+  },
+  "gallery": {
+    "title": "精选作品",
+    "viewAll": "查看完整收藏"
+  },
+  "roadmap": {
+    "title": "路线图",
+    "q1": {
+      "title": "2025年Q1 - 创世",
+      "items": [
+        "启动网站和社交媒体",
+        "发布前90件作品",
+        "建立Discord社区",
+        "首批收藏者奖励"
+      ]
+    },
+    "q2": {
+      "title": "2025年Q2 - 成长",
+      "items": [
+        "第91-180天作品发布",
+        "持有者专属福利",
+        "与画廊合作",
+        "虚拟展览"
+      ]
+    },
+    "q3": {
+      "title": "2025年Q3 - 扩展",
+      "items": [
+        "第181-270天发布",
+        "持有者专属实体艺术印刷品",
+        "艺术家合作",
+        "SIA元宇宙头像"
+      ]
+    },
+    "q4": {
+      "title": "2025年Q4 - 进化",
+      "items": [
+        "完成365天旅程",
+        "周年庆典",
+        "未来路线图揭晓",
+        "持有者专属空投"
+      ]
+    }
+  },
+  "technical": {
+    "title": "技术细节",
+    "blockchain": "区块链",
+    "blockchainValue": "Solana",
+    "supply": "总供应量",
+    "supplyValue": "365个独特NFT",
+    "format": "格式",
+    "formatValue": "AI生成数字艺术",
+    "metadata": "元数据",
+    "metadataValue": "完全上链"
+  },
+  "social": {
+    "title": "加入我们的社区",
+    "description": "关注SIA的旅程，与全球收藏者建立联系"
+  },
+  "footer": {
+    "rights": "© 2025 Am I Real Sia. 保留所有权利。",
+    "email": "联系我们"
+  },
+  "language": {
+    "select": "语言",
+    "en": "English",
+    "ko": "한국어",
+    "ja": "日本語",
+    "zh": "中文"
+  }
+}

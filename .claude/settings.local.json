@@ -23,7 +23,17 @@
       "Bash(git commit -m \"$(cat <<''EOF''\n🔒 Security: Separate public and private information\n\n- Created public README.md (safe for GitHub)\n- Moved detailed info to README_PRIVATE.md (Git ignored)\n- Updated .gitignore to protect sensitive data\n- Added security guide and documentation\n- Added Notion sync scripts (public/private separation)\n- Added VS Code + Notion integration guide\n\n🤖 Generated with Claude Code\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
       "Bash(git reset:*)",
       "Bash(git commit -m \"$(cat <<''EOF''\n🔒 Security: Separate public and private information\n\n- Created public README.md (safe for GitHub)\n- Moved detailed info to README_PRIVATE.md (Git ignored)\n- Updated .gitignore to protect sensitive data\n- Added comprehensive security guide\n- Added Notion sync scripts (public/private separation)\n- Added VS Code + Notion integration guide\n- Removed all real API keys from documentation\n\n🤖 Generated with Claude Code\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
-      "Bash(npx create-next-app@latest:*)"
+      "Bash(npx create-next-app@latest:*)",
+      "Bash(git commit:*)",
+      "Bash(start https://dash.cloudflare.com/?to=/:account/pages)",
+      "Bash(curl:*)",
+      "Bash(winget install:*)",
+      "Bash(choco install:*)",
+      "Bash(start http://localhost:3001)",
+      "Bash(start https://www.figma.com/community/file/1525544901440427466/nft-landing-page-design-for-web3-digital-collectibles)",
+      "Bash(start chrome http://localhost:3001)",
+      "Bash(start chrome https://www.figma.com/community/file/1525544901440427466/nft-landing-page-design-for-web3-digital-collectibles)",
+      "Bash(start:*)"
     ],
     "deny": [],
     "ask": []

@@ -1,0 +1,88 @@
+{
+  "hero": {
+    "title": "Am I Real Sia",
+    "subtitle": "私は本物？それともAI？",
+    "description": "現実と人工知能の境界を探求するデジタルアイドルSIAの365日AIアートジャーニー",
+    "exploreButton": "コレクションを見る",
+    "mintButton": "NFTをミント"
+  },
+  "about": {
+    "title": "プロジェクトについて",
+    "description": "Am I Real Siaは、365日間毎日ユニークなAI生成アートワークをリリースする革新的なNFTプロジェクトです。各作品は、自身の存在を問いかけるSIAの進化を捉えています。",
+    "dailyArt": "毎日のAIアート",
+    "dailyArtDesc": "365日毎日更新",
+    "blockchain": "Solanaブロックチェーン",
+    "blockchainDesc": "高速でエコフレンドリー",
+    "community": "コミュニティ主導",
+    "communityDesc": "コレクターと共に成長"
+  },
+  "gallery": {
+    "title": "注目のアートワーク",
+    "viewAll": "全コレクションを見る"
+  },
+  "roadmap": {
+    "title": "ロードマップ",
+    "q1": {
+      "title": "2025年Q1 - ジェネシス",
+      "items": [
+        "ウェブサイトとSNSローンチ",
+        "最初の90作品リリース",
+        "Discordコミュニティ構築",
+        "初期コレクター報酬"
+      ]
+    },
+    "q2": {
+      "title": "2025年Q2 - 成長",
+      "items": [
+        "91-180日目の作品リリース",
+        "ホルダー限定特典",
+        "ギャラリーとのパートナーシップ",
+        "バーチャル展示会"
+      ]
+    },
+    "q3": {
+      "title": "2025年Q3 - 拡張",
+      "items": [
+        "181-270日目のリリース",
+        "ホルダー向け実物アートプリント",
+        "アーティストコラボレーション",
+        "SIAメタバースアバター"
+      ]
+    },
+    "q4": {
+      "title": "2025年Q4 - 進化",
+      "items": [
+        "365日間の旅完成",
+        "アニバーサリーイベント",
+        "将来のロードマップ公開",
+        "ホルダー限定ドロップ"
+      ]
+    }
+  },
+  "technical": {
+    "title": "技術詳細",
+    "blockchain": "ブロックチェーン",
+    "blockchainValue": "Solana",
+    "supply": "総供給量",
+    "supplyValue": "365ユニークNFT",
+    "format": "形式",
+    "formatValue": "AI生成デジタルアート",
+    "metadata": "メタデータ",
+    "metadataValue": "完全オンチェーン"
+  },
+  "social": {
+    "title": "コミュニティに参加",
+    "description": "SIAの旅をフォローし、世界中のコレクターとつながりましょう"
+  },
+  "footer": {
+    "rights": "© 2025 Am I Real Sia. All rights reserved.",
+    "email": "お問い合わせ"
+  },
+  "language": {
+    "select": "言語",
+    "en": "English",
+    "ko": "한국어",
+    "ja": "日本語",
+    "zh": "中文"
+  }
+}

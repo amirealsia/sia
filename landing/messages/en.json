@@ -1,0 +1,88 @@
+{
+  "hero": {
+    "title": "Am I Real Sia",
+    "subtitle": "Am I real, or just AI?",
+    "description": "A 365-day AI art journey featuring SIA, a digital idol exploring the boundaries between reality and artificial intelligence.",
+    "exploreButton": "Explore Collection",
+    "mintButton": "Mint NFT"
+  },
+  "about": {
+    "title": "About the Project",
+    "description": "Am I Real Sia is an innovative NFT project that releases a unique AI-generated artwork every day for 365 days. Each piece captures SIA's evolution as she questions her own existence.",
+    "dailyArt": "Daily AI Art",
+    "dailyArtDesc": "New artwork every day",
+    "blockchain": "Solana Blockchain",
+    "blockchainDesc": "Fast and eco-friendly",
+    "community": "Community Driven",
+    "communityDesc": "Built with collectors"
+  },
+  "gallery": {
+    "title": "Featured Artworks",
+    "viewAll": "View Full Collection"
+  },
+  "roadmap": {
+    "title": "Roadmap",
+    "q1": {
+      "title": "Q1 2025 - Genesis",
+      "items": [
+        "Launch website and social media",
+        "Release first 90 artworks",
+        "Build community on Discord",
+        "First collector rewards"
+      ]
+    },
+    "q2": {
+      "title": "Q2 2025 - Growth",
+      "items": [
+        "Day 91-180 artwork releases",
+        "Exclusive holder benefits",
+        "Partnerships with galleries",
+        "Virtual exhibition"
+      ]
+    },
+    "q3": {
+      "title": "Q3 2025 - Expansion",
+      "items": [
+        "Day 181-270 releases",
+        "Physical art prints for holders",
+        "Collaboration with artists",
+        "SIA metaverse avatar"
+      ]
+    },
+    "q4": {
+      "title": "Q4 2025 - Evolution",
+      "items": [
+        "Complete 365-day journey",
+        "Anniversary celebration",
+        "Future roadmap reveal",
+        "Holder exclusive drops"
+      ]
+    }
+  },
+  "technical": {
+    "title": "Technical Details",
+    "blockchain": "Blockchain",
+    "blockchainValue": "Solana",
+    "supply": "Total Supply",
+    "supplyValue": "365 Unique NFTs",
+    "format": "Format",
+    "formatValue": "AI-Generated Digital Art",
+    "metadata": "Metadata",
+    "metadataValue": "Fully On-Chain"
+  },
+  "social": {
+    "title": "Join Our Community",
+    "description": "Follow SIA's journey and connect with collectors worldwide"
+  },
+  "footer": {
+    "rights": "© 2025 Am I Real Sia. All rights reserved.",
+    "email": "Contact"
+  },
+  "language": {
+    "select": "Language",
+    "en": "English",
+    "ko": "한국어",
+    "ja": "日本語",
+    "zh": "中文"
+  }
+}
