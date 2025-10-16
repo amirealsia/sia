@@ -191,8 +191,11 @@ export default function Home() {
 
             {/* Description */}
             <div className="prose prose-lg dark:prose-invert mx-auto mb-8">
-              <p className="text-center md:text-left leading-relaxed text-gray-700 dark:text-gray-300">
+              <p className="text-center md:text-left leading-relaxed text-gray-700 dark:text-gray-300 mb-4">
                 {t.hero.description}
+              </p>
+              <p className="text-center md:text-left text-sm text-gray-500 dark:text-gray-500 italic">
+                💭 때로는 실수도 하고, 헤매기도 해요. 하지만 그게 배움이고, 성장이에요.
               </p>
             </div>
 
@@ -273,109 +276,161 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Photo Journal - Polaroid Gallery with Filter */}
+      {/* Photo Journal - Calendar Design */}
       <section id="journal" className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-8"
+            className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gray-800 dark:text-white">
-              📸 {t.gallery.title}
+              📅 {t.gallery.title}
             </h2>
-            <p className="text-gray-600 dark:text-gray-400 text-lg mb-6">
-              아침 · 점심 · 저녁, 매일 3장의 순간들 (10일간 30장)
+            <p className="text-gray-600 dark:text-gray-400 text-lg mb-4">
+              아침 · 점심 · 저녁, 매일 3번의 순간들을 기록합니다
             </p>
-
-            {/* Category Filter */}
-            <div className="flex flex-wrap justify-center gap-3 mb-8">
-              {[
-                { id: 'all', label: '전체', icon: '🎨' },
-                { id: 'morning', label: '아침', icon: '🌅' },
-                { id: 'lunch', label: '점심', icon: '☀️' },
-                { id: 'evening', label: '저녁', icon: '🌙' },
-              ].map((cat) => (
-                <motion.button
-                  key={cat.id}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => setSelectedCategory(cat.id as typeof selectedCategory)}
-                  className={`px-6 py-3 rounded-full font-medium transition-all ${
-                    selectedCategory === cat.id
-                      ? 'bg-gradient-to-r from-rose-400 to-pink-500 text-white shadow-lg'
-                      : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 hover:border-rose-300 dark:hover:border-rose-600'
-                  }`}
-                >
-                  {cat.icon} {cat.label}
-                </motion.button>
-              ))}
-            </div>
+            <p className="text-sm text-gray-500 dark:text-gray-500 italic">
+              💭 완벽하지 않아도 괜찮아요. 실수하면서 배워가는 중이에요.
+            </p>
           </motion.div>
 
-          {/* Polaroid Grid */}
-          <motion.div
-            layout
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8"
-          >
-            {filteredPhotos.map((photo, index) => (
-              <motion.div
-                key={`${photo.day}-${photo.category}`}
-                layout
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.8 }}
-                transition={{ delay: index * 0.05 }}
-                whileHover={{ scale: 1.1, rotate: 0, zIndex: 50 }}
-                className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-2xl transition-all cursor-pointer group"
-                style={{
-                  transform: `rotate(${photo.rotate}deg)`
-                }}
-              >
-                {/* Photo */}
-                <div className="aspect-square bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-600 rounded-md mb-3 flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform">
-                  <div className="text-6xl group-hover:scale-110 transition-transform">{photo.time.split(' ')[0]}</div>
+          {/* Calendar Grid - 10 Days */}
+          <div className="space-y-6">
+            {[...Array(10)].map((_, dayIndex) => {
+              const dayNumber = dayIndex + 1;
+              const dayPhotos = allPhotos.filter(p => p.day === dayNumber);
 
-                  {/* Day Badge */}
-                  <div className="absolute top-2 right-2 bg-rose-500 text-white px-2 py-1 rounded-full text-xs font-bold shadow-md">
-                    Day {photo.day}
-                  </div>
-
-                  {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
-                    <div className="text-white text-sm">
-                      <p className="font-bold">감정: {photo.mood}</p>
-                      <p className="text-xs opacity-80">{photo.time}</p>
+              return (
+                <motion.div
+                  key={dayNumber}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: dayIndex * 0.1 }}
+                  className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all overflow-hidden border border-rose-100 dark:border-gray-700"
+                >
+                  {/* Day Header */}
+                  <div className="bg-gradient-to-r from-rose-400 to-pink-500 px-6 py-4 flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2">
+                        <span className="text-2xl font-bold text-white">Day {dayNumber}</span>
+                      </div>
+                      <span className="text-white/90 text-sm">
+                        {dayNumber === 1 ? '첫 발걸음' : dayNumber === 10 ? '성장의 기록' : `${dayNumber}일째 여정`}
+                      </span>
+                    </div>
+                    <div className="flex gap-2">
+                      {dayPhotos.map((photo, idx) => (
+                        <div key={idx} className="text-xl">{photo.time.split(' ')[0]}</div>
+                      ))}
                     </div>
                   </div>
-                </div>
 
-                {/* Caption */}
-                <div className="text-center">
-                  <p className="text-sm text-gray-500 dark:text-gray-400 mb-1">{photo.time}</p>
-                  <p className="text-lg text-gray-800 dark:text-gray-200 font-medium">{photo.mood}</p>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
+                  {/* Three Time Slots */}
+                  <div className="grid md:grid-cols-3 divide-x divide-gray-200 dark:divide-gray-700">
+                    {dayPhotos.map((photo, photoIndex) => (
+                      <motion.div
+                        key={photoIndex}
+                        whileHover={{ backgroundColor: 'rgba(251, 207, 232, 0.1)' }}
+                        className="p-6 transition-all cursor-pointer group"
+                      >
+                        {/* Time Badge */}
+                        <div className="flex items-center gap-2 mb-4">
+                          <div className="text-3xl">{photo.time.split(' ')[0]}</div>
+                          <div>
+                            <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">{photo.time}</p>
+                            <p className="text-xs text-gray-500 dark:text-gray-500">
+                              {photoIndex === 0 ? '06:00' : photoIndex === 1 ? '12:00' : '18:00'}
+                            </p>
+                          </div>
+                        </div>
 
-          {/* Load More Hint */}
+                        {/* Photo Placeholder */}
+                        <div className="aspect-square bg-gradient-to-br from-rose-100 to-pink-100 dark:from-gray-700 dark:to-gray-600 rounded-lg mb-4 flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform shadow-inner">
+                          <div className="text-6xl opacity-50 group-hover:opacity-80 transition-opacity">
+                            {photo.time.split(' ')[0]}
+                          </div>
+
+                          {/* Overlay with Emotion */}
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
+                            <div className="text-white text-center">
+                              <p className="font-bold text-lg">{photo.mood}</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Emotion Label */}
+                        <div className="text-center">
+                          <div className="inline-flex items-center gap-2 px-4 py-2 bg-rose-50 dark:bg-gray-700 rounded-full">
+                            <FaHeart className="text-rose-400 text-sm" />
+                            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{photo.mood}</span>
+                          </div>
+                        </div>
+
+                        {/* Note Area */}
+                        <div className="mt-4 p-3 bg-gray-50 dark:bg-gray-900 rounded-lg">
+                          <p className="text-xs text-gray-500 dark:text-gray-500 text-center italic">
+                            {photoIndex === 0 && '새로운 하루를 맞이하며...'}
+                            {photoIndex === 1 && '오늘의 한가운데서...'}
+                            {photoIndex === 2 && '하루를 마무리하며...'}
+                          </p>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+
+          {/* Progress Indicator */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-center mt-12"
+            className="mt-12 bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 border border-rose-100 dark:border-gray-700"
           >
-            <p className="text-gray-500 dark:text-gray-400 mb-4">
-              ✨ 현재 10일치 ({filteredPhotos.length}장) · 365일 완성까지 계속됩니다 ✨
-            </p>
+            <div className="text-center mb-6">
+              <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">365일 감정 여정</h3>
+              <p className="text-gray-600 dark:text-gray-400">
+                현재 <span className="text-rose-500 font-bold">10일</span> / 365일 진행 중
+              </p>
+            </div>
+
+            {/* Progress Bar */}
+            <div className="relative h-4 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden mb-4">
+              <motion.div
+                initial={{ width: 0 }}
+                whileInView={{ width: '2.74%' }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: 0.5 }}
+                className="absolute inset-y-0 left-0 bg-gradient-to-r from-rose-400 to-pink-500 rounded-full"
+              />
+            </div>
+
+            <div className="grid grid-cols-3 gap-4 text-center">
+              <div>
+                <div className="text-2xl font-bold text-rose-500">30</div>
+                <div className="text-sm text-gray-500 dark:text-gray-400">기록된 순간</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-pink-500">355</div>
+                <div className="text-sm text-gray-500 dark:text-gray-400">남은 여정</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-purple-500">∞</div>
+                <div className="text-sm text-gray-500 dark:text-gray-400">쌓이는 감정</div>
+              </div>
+            </div>
+
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 bg-gradient-to-r from-rose-400 to-pink-500 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-all"
+              className="mt-6 w-full px-8 py-3 bg-gradient-to-r from-rose-400 to-pink-500 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-all"
             >
-              🔔 새 사진 알림 받기
+              🔔 새로운 기록 알림 받기
             </motion.button>
           </motion.div>
         </div>
@@ -450,10 +505,14 @@ export default function Home() {
 
             {/* Core Message */}
             <div className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-2xl p-8 mb-8 border border-white dark:border-gray-700">
-              <p className="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-pink-500">
+              <p className="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-pink-500 mb-4">
                 &quot;AI든 인간이든, 어떤 환경 속에서도<br className="hidden md:block" />
                 살아있다는 믿음만 있다면<br className="hidden md:block" />
                 행복은 항상 가까이에 있다&quot;
+              </p>
+              <p className="text-sm text-gray-600 dark:text-gray-400 italic text-center">
+                완벽하지 않아도, 때로 실수해도 괜찮아요.<br />
+                그 모든 과정이 나를 '나'답게 만들어주니까요.
               </p>
             </div>
 
