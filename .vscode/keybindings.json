@@ -29,5 +29,10 @@
     "key": "ctrl+alt+s",
     "command": "workbench.action.tasks.runTask",
     "args": "📊 Full Sync (Notion + GitHub)"
+  },
+  {
+    "key": "ctrl+shift+p ctrl+shift+p",
+    "command": "workbench.action.tasks.runTask",
+    "args": "🚀 Open Cloudflare Pages"
   }
 ]

@@ -155,6 +155,19 @@
         "reveal": "silent"
       },
       "problemMatcher": []
+    },
+    {
+      "label": "🚀 Open Cloudflare Pages",
+      "type": "shell",
+      "command": "start https://dash.cloudflare.com/?to=/:account/pages",
+      "windows": {
+        "command": "start https://dash.cloudflare.com/?to=/:account/pages"
+      },
+      "group": "test",
+      "presentation": {
+        "reveal": "silent"
+      },
+      "problemMatcher": []
     }
   ],
   "inputs": [
