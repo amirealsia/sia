@@ -131,11 +131,13 @@ pip install -r requirements.txt
 - 사이트: https://nft.storage/
 - 가입 후 API Key 발급
 - **무료**: 무제한 업로드
+b0b615d5.357ad2d32b1f4b109a4a1c61cd493482
 
 #### 2) Crossmint (Solana NFT 민팅)
 - 사이트: https://www.crossmint.com/
 - 가입 후 API Key 발급
 - **무료**: 월 100회 민팅
+sk_production_9yi9NMxE55QjAzUM3N47KA913KSRJckGSeHLTYwGYP6YLUEHKwxfKR1MFAXWeetQRmLtp1osTq4U7HHmjn1FbhG8TM7RqAnPn5F64i3jHBiaM5DWa3kf3BTcoiuCJUyy5TzH9sspx7GNFQBL4zFKT1N181ZiHSLpXVLNLtAogSSSHRYzh3X1tfRxQ6xzP2BDv1QNdj8j2tq4DtMSevzzoMeL
 
 #### 3) OpenAI API (댓글 자동응답)
 - 사이트: https://platform.openai.com/
@@ -153,6 +155,10 @@ pip install -r requirements.txt
 - Script 앱 생성
 - client_id, client_secret 발급
 - **무료**
+amirealsia
+personal use script
+vQeWqJjJpnd_zl9v61Yg6w
+secret	MG5_d83AwFvvDQGw3EmwPwetZFH82w
 
 #### 6) X (Twitter) API (선택)
 - 사이트: https://developer.x.com/
@@ -163,6 +169,9 @@ pip install -r requirements.txt
 - 사이트: https://bsky.app/
 - 계정만 있으면 됨
 - **무료**
+
+deepseek Api : sk-8dda93f71b4941ccb541e5cf031ee3f4
+
 
 ---
 
@@ -219,7 +228,7 @@ BASE_DOMAIN=amirealsia.io
 3. 새 지갑 생성
 4. **시드 구문(12단어) 안전하게 백업**
 5. 지갑 주소 복사 → `.env`에 입력
-
+82LAraFtkWQUp3PNdCM7iVUb495A7xnj4AnFYFT6G1Nh
 ### 테스트넷 SOL 받기
 ```
 1. Phantom에서 네트워크를 "Devnet"으로 변경

@@ -1,0 +1,14 @@
+# Core dependencies for SIA Auto-Reply Bot
+openai>=1.0.0
+python-dotenv>=1.0.0
+requests>=2.31.0
+
+# Platform integrations (install as needed)
+instagrapi>=1.16.0  # Instagram
+praw>=7.7.0         # Reddit
+tweepy>=4.14.0      # Twitter/X
+discord.py>=2.3.0   # Discord
+
+# Optional: Advanced features
+schedule>=1.2.0     # Task scheduling
+loguru>=0.7.0       # Better logging

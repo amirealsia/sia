@@ -33,7 +33,12 @@
       "Bash(start https://www.figma.com/community/file/1525544901440427466/nft-landing-page-design-for-web3-digital-collectibles)",
       "Bash(start chrome http://localhost:3001)",
       "Bash(start chrome https://www.figma.com/community/file/1525544901440427466/nft-landing-page-design-for-web3-digital-collectibles)",
-      "Bash(start:*)"
+      "Bash(start:*)",
+      "Bash(taskkill:*)",
+      "Bash(netstat:*)",
+      "Bash(timeout 5 npm run dev:*)",
+      "Bash(tasklist:*)",
+      "Bash(npx kill-port:*)"
     ],
     "deny": [],
     "ask": []
