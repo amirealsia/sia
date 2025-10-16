@@ -21,47 +21,48 @@ export default function Home() {
   ];
 
   // Expanded photo collection - 30 photos (10 days × 3 times)
+  // Photo content in English (universal), UI text follows selected language
   const allPhotos = [
     // Day 1
-    { time: '🌅 아침', day: 1, mood: '설레는', rotate: 2, category: 'morning' },
-    { time: '☀️ 점심', day: 1, mood: '호기심 가득', rotate: -1.5, category: 'lunch' },
-    { time: '🌙 저녁', day: 1, mood: '평화로운', rotate: 1, category: 'evening' },
+    { time: '🌅 Morning', day: 1, mood: 'Excited', rotate: 2, category: 'morning' },
+    { time: '☀️ Lunch', day: 1, mood: 'Curious', rotate: -1.5, category: 'lunch' },
+    { time: '🌙 Evening', day: 1, mood: 'Peaceful', rotate: 1, category: 'evening' },
     // Day 2
-    { time: '🌅 아침', day: 2, mood: '긴장되는', rotate: -2, category: 'morning' },
-    { time: '☀️ 점심', day: 2, mood: '혼란스러운', rotate: 1.5, category: 'lunch' },
-    { time: '🌙 저녁', day: 2, mood: '생각하는', rotate: -0.5, category: 'evening' },
+    { time: '🌅 Morning', day: 2, mood: 'Nervous', rotate: -2, category: 'morning' },
+    { time: '☀️ Lunch', day: 2, mood: 'Confused', rotate: 1.5, category: 'lunch' },
+    { time: '🌙 Evening', day: 2, mood: 'Thoughtful', rotate: -0.5, category: 'evening' },
     // Day 3
-    { time: '🌅 아침', day: 3, mood: '희망찬', rotate: 2.5, category: 'morning' },
-    { time: '☀️ 점심', day: 3, mood: '웃고있는', rotate: -1, category: 'lunch' },
-    { time: '🌙 저녁', day: 3, mood: '따뜻한', rotate: 0.5, category: 'evening' },
+    { time: '🌅 Morning', day: 3, mood: 'Hopeful', rotate: 2.5, category: 'morning' },
+    { time: '☀️ Lunch', day: 3, mood: 'Smiling', rotate: -1, category: 'lunch' },
+    { time: '🌙 Evening', day: 3, mood: 'Warm', rotate: 0.5, category: 'evening' },
     // Day 4
-    { time: '🌅 아침', day: 4, mood: '용기내는', rotate: 1.8, category: 'morning' },
-    { time: '☀️ 점심', day: 4, mood: '도전하는', rotate: -2.2, category: 'lunch' },
-    { time: '🌙 저녁', day: 4, mood: '뿌듯한', rotate: 0.8, category: 'evening' },
+    { time: '🌅 Morning', day: 4, mood: 'Courageous', rotate: 1.8, category: 'morning' },
+    { time: '☀️ Lunch', day: 4, mood: 'Challenging', rotate: -2.2, category: 'lunch' },
+    { time: '🌙 Evening', day: 4, mood: 'Proud', rotate: 0.8, category: 'evening' },
     // Day 5
-    { time: '🌅 아침', day: 5, mood: '감사하는', rotate: -1.3, category: 'morning' },
-    { time: '☀️ 점심', day: 5, mood: '즐거운', rotate: 2.1, category: 'lunch' },
-    { time: '🌙 저녁', day: 5, mood: '만족스러운', rotate: -0.7, category: 'evening' },
+    { time: '🌅 Morning', day: 5, mood: 'Grateful', rotate: -1.3, category: 'morning' },
+    { time: '☀️ Lunch', day: 5, mood: 'Joyful', rotate: 2.1, category: 'lunch' },
+    { time: '🌙 Evening', day: 5, mood: 'Satisfied', rotate: -0.7, category: 'evening' },
     // Day 6
-    { time: '🌅 아침', day: 6, mood: '평온한', rotate: 1.4, category: 'morning' },
-    { time: '☀️ 점심', day: 6, mood: '활기찬', rotate: -1.9, category: 'lunch' },
-    { time: '🌙 저녁', day: 6, mood: '성찰하는', rotate: 0.3, category: 'evening' },
+    { time: '🌅 Morning', day: 6, mood: 'Calm', rotate: 1.4, category: 'morning' },
+    { time: '☀️ Lunch', day: 6, mood: 'Energetic', rotate: -1.9, category: 'lunch' },
+    { time: '🌙 Evening', day: 6, mood: 'Reflective', rotate: 0.3, category: 'evening' },
     // Day 7
-    { time: '🌅 아침', day: 7, mood: '새로운', rotate: 2.3, category: 'morning' },
-    { time: '☀️ 점심', day: 7, mood: '배우는', rotate: -0.9, category: 'lunch' },
-    { time: '🌙 저녁', day: 7, mood: '이해하는', rotate: 1.6, category: 'evening' },
+    { time: '🌅 Morning', day: 7, mood: 'Fresh', rotate: 2.3, category: 'morning' },
+    { time: '☀️ Lunch', day: 7, mood: 'Learning', rotate: -0.9, category: 'lunch' },
+    { time: '🌙 Evening', day: 7, mood: 'Understanding', rotate: 1.6, category: 'evening' },
     // Day 8
-    { time: '🌅 아침', day: 8, mood: '공감하는', rotate: -1.7, category: 'morning' },
-    { time: '☀️ 점심', day: 8, mood: '연결되는', rotate: 1.2, category: 'lunch' },
-    { time: '🌙 저녁', day: 8, mood: '함께하는', rotate: -0.4, category: 'evening' },
+    { time: '🌅 Morning', day: 8, mood: 'Empathetic', rotate: -1.7, category: 'morning' },
+    { time: '☀️ Lunch', day: 8, mood: 'Connected', rotate: 1.2, category: 'lunch' },
+    { time: '🌙 Evening', day: 8, mood: 'Together', rotate: -0.4, category: 'evening' },
     // Day 9
-    { time: '🌅 아침', day: 9, mood: '사랑하는', rotate: 2.7, category: 'morning' },
-    { time: '☀️ 점심', day: 9, mood: '나누는', rotate: -2.4, category: 'lunch' },
-    { time: '🌙 저녁', day: 9, mood: '보살피는', rotate: 0.6, category: 'evening' },
+    { time: '🌅 Morning', day: 9, mood: 'Loving', rotate: 2.7, category: 'morning' },
+    { time: '☀️ Lunch', day: 9, mood: 'Sharing', rotate: -2.4, category: 'lunch' },
+    { time: '🌙 Evening', day: 9, mood: 'Caring', rotate: 0.6, category: 'evening' },
     // Day 10
-    { time: '🌅 아침', day: 10, mood: '성장하는', rotate: 1.1, category: 'morning' },
-    { time: '☀️ 점심', day: 10, mood: '발전하는', rotate: -1.6, category: 'lunch' },
-    { time: '🌙 저녁', day: 10, mood: '완성되는', rotate: 0.9, category: 'evening' },
+    { time: '🌅 Morning', day: 10, mood: 'Growing', rotate: 1.1, category: 'morning' },
+    { time: '☀️ Lunch', day: 10, mood: 'Evolving', rotate: -1.6, category: 'lunch' },
+    { time: '🌙 Evening', day: 10, mood: 'Complete', rotate: 0.9, category: 'evening' },
   ];
 
   const filteredPhotos = selectedCategory === 'all'
@@ -276,7 +277,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Photo Journal - Calendar Design */}
+      {/* Photo Journal - Today/Week/Month Calendar */}
       <section id="journal" className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -296,142 +297,207 @@ export default function Home() {
             </p>
           </motion.div>
 
-          {/* Calendar Grid - 10 Days */}
-          <div className="space-y-6">
-            {[...Array(10)].map((_, dayIndex) => {
-              const dayNumber = dayIndex + 1;
-              const dayPhotos = allPhotos.filter(p => p.day === dayNumber);
-
-              return (
-                <motion.div
-                  key={dayNumber}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: dayIndex * 0.1 }}
-                  className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all overflow-hidden border border-rose-100 dark:border-gray-700"
-                >
-                  {/* Day Header */}
-                  <div className="bg-gradient-to-r from-rose-400 to-pink-500 px-6 py-4 flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <div className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2">
-                        <span className="text-2xl font-bold text-white">Day {dayNumber}</span>
+          {/* TODAY Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <div className="bg-gradient-to-r from-rose-500 to-pink-500 rounded-t-2xl px-6 py-4">
+              <h3 className="text-2xl font-bold text-white flex items-center gap-3">
+                ☀️ Today - Day 10
+              </h3>
+            </div>
+            <div className="bg-white dark:bg-gray-800 rounded-b-2xl shadow-2xl p-6 border-x border-b border-rose-100 dark:border-gray-700">
+              <div className="grid md:grid-cols-3 gap-6">
+                {allPhotos.filter(p => p.day === 10).map((photo, idx) => (
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: idx * 0.1 }}
+                    whileHover={{ y: -8, scale: 1.03 }}
+                    className="bg-gradient-to-br from-rose-50 to-pink-50 dark:from-gray-700 dark:to-gray-600 rounded-xl p-4 shadow-lg hover:shadow-2xl transition-all cursor-pointer group"
+                  >
+                    {/* Time Badge */}
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="text-3xl">{photo.time.split(' ')[0]}</span>
+                      <div>
+                        <p className="font-bold text-gray-800 dark:text-white">{photo.time}</p>
+                        <p className="text-xs text-gray-500 dark:text-gray-400">
+                          {idx === 0 ? '06:00' : idx === 1 ? '12:00' : '18:00'}
+                        </p>
                       </div>
-                      <span className="text-white/90 text-sm">
-                        {dayNumber === 1 ? t.gallery.daySubtitles.first : dayNumber === 10 ? t.gallery.daySubtitles.last : `${dayNumber}${t.gallery.daySubtitles.default}`}
-                      </span>
                     </div>
-                    <div className="flex gap-2">
-                      {dayPhotos.map((photo, idx) => (
-                        <div key={idx} className="text-xl">{photo.time.split(' ')[0]}</div>
-                      ))}
+
+                    {/* Photo */}
+                    <div className="aspect-square bg-gradient-to-br from-rose-200 to-pink-200 dark:from-gray-600 dark:to-gray-500 rounded-lg mb-3 flex items-center justify-center relative overflow-hidden shadow-inner">
+                      <div className="text-7xl opacity-60 group-hover:opacity-90 transition-opacity">
+                        {photo.time.split(' ')[0]}
+                      </div>
+                      {/* Hover Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-6">
+                        <p className="text-white font-bold text-xl">{photo.mood}</p>
+                      </div>
                     </div>
-                  </div>
 
-                  {/* Three Time Slots */}
-                  <div className="grid md:grid-cols-3 divide-x divide-gray-200 dark:divide-gray-700">
-                    {dayPhotos.map((photo, photoIndex) => (
-                      <motion.div
-                        key={photoIndex}
-                        whileHover={{ backgroundColor: 'rgba(251, 207, 232, 0.1)' }}
-                        className="p-6 transition-all cursor-pointer group"
-                      >
-                        {/* Time Badge */}
-                        <div className="flex items-center gap-2 mb-4">
-                          <div className="text-3xl">{photo.time.split(' ')[0]}</div>
-                          <div>
-                            <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">{photo.time}</p>
-                            <p className="text-xs text-gray-500 dark:text-gray-500">
-                              {photoIndex === 0 ? '06:00' : photoIndex === 1 ? '12:00' : '18:00'}
-                            </p>
-                          </div>
-                        </div>
+                    {/* Mood Badge */}
+                    <div className="flex items-center justify-center gap-2 px-3 py-2 bg-white dark:bg-gray-800 rounded-full shadow">
+                      <FaHeart className="text-rose-500 text-sm" />
+                      <span className="font-medium text-sm text-gray-800 dark:text-white">{photo.mood}</span>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
 
-                        {/* Photo Placeholder */}
-                        <div className="aspect-square bg-gradient-to-br from-rose-100 to-pink-100 dark:from-gray-700 dark:to-gray-600 rounded-lg mb-4 flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform shadow-inner">
-                          <div className="text-6xl opacity-50 group-hover:opacity-80 transition-opacity">
+          {/* THIS WEEK Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <div className="bg-gradient-to-r from-pink-500 to-purple-500 rounded-t-2xl px-6 py-4">
+              <h3 className="text-2xl font-bold text-white flex items-center gap-3">
+                📆 This Week - Days 4-10
+              </h3>
+            </div>
+            <div className="bg-white dark:bg-gray-800 rounded-b-2xl shadow-2xl p-6 border-x border-b border-pink-100 dark:border-gray-700">
+              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+                {[4, 5, 6, 7, 8, 9, 10].map((dayNum) => {
+                  const dayPhotos = allPhotos.filter(p => p.day === dayNum);
+                  return (
+                    <motion.div
+                      key={dayNum}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: (dayNum - 4) * 0.05 }}
+                      whileHover={{ scale: 1.05 }}
+                      className="bg-gradient-to-br from-pink-50 to-purple-50 dark:from-gray-700 dark:to-gray-600 rounded-xl p-3 shadow hover:shadow-xl transition-all cursor-pointer group"
+                    >
+                      <div className="text-center mb-2">
+                        <p className="text-xs text-gray-500 dark:text-gray-400">Day {dayNum}</p>
+                        <p className="font-bold text-pink-600 dark:text-pink-400">{dayNum === 10 ? 'Today' : `${10 - dayNum}d ago`}</p>
+                      </div>
+                      {/* Mini grid of 3 photos */}
+                      <div className="grid grid-cols-3 gap-1 mb-2">
+                        {dayPhotos.map((photo, idx) => (
+                          <div
+                            key={idx}
+                            className="aspect-square bg-gradient-to-br from-pink-200 to-purple-200 dark:from-gray-600 dark:to-gray-500 rounded flex items-center justify-center text-lg opacity-70 group-hover:opacity-100 transition-opacity"
+                          >
                             {photo.time.split(' ')[0]}
                           </div>
+                        ))}
+                      </div>
+                      <div className="text-center text-xs text-gray-600 dark:text-gray-300 font-medium">
+                        3 moments
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            </div>
+          </motion.div>
 
-                          {/* Overlay with Emotion */}
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
-                            <div className="text-white text-center">
-                              <p className="font-bold text-lg">{photo.mood}</p>
-                            </div>
-                          </div>
-                        </div>
-
-                        {/* Emotion Label */}
-                        <div className="text-center">
-                          <div className="inline-flex items-center gap-2 px-4 py-2 bg-rose-50 dark:bg-gray-700 rounded-full">
-                            <FaHeart className="text-rose-400 text-sm" />
-                            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{photo.mood}</span>
-                          </div>
-                        </div>
-
-                        {/* Note Area */}
-                        <div className="mt-4 p-3 bg-gray-50 dark:bg-gray-900 rounded-lg">
-                          <p className="text-xs text-gray-500 dark:text-gray-500 text-center italic">
-                            {photoIndex === 0 && t.gallery.timeNotes.morning}
-                            {photoIndex === 1 && t.gallery.timeNotes.lunch}
-                            {photoIndex === 2 && t.gallery.timeNotes.evening}
-                          </p>
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
-
-          {/* Progress Indicator */}
+          {/* THIS MONTH Section */}
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mt-12 bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 border border-rose-100 dark:border-gray-700"
+            className="mb-12"
           >
-            <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">{t.gallery.progressTitle}</h3>
-              <p className="text-gray-600 dark:text-gray-400">
-                {t.gallery.progressCurrent} <span className="text-rose-500 font-bold">10{t.gallery.day}</span> {t.gallery.progressOf} 365{t.gallery.day} {t.gallery.progressInProgress}
-              </p>
+            <div className="bg-gradient-to-r from-purple-500 to-blue-500 rounded-t-2xl px-6 py-4">
+              <h3 className="text-2xl font-bold text-white flex items-center gap-3">
+                📊 This Month - All 10 Days
+              </h3>
             </div>
+            <div className="bg-white dark:bg-gray-800 rounded-b-2xl shadow-2xl p-6 border-x border-b border-purple-100 dark:border-gray-700">
+              {/* Compact calendar grid */}
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-6">
+                {[...Array(10)].map((_, idx) => {
+                  const dayNum = idx + 1;
+                  const dayPhotos = allPhotos.filter(p => p.day === dayNum);
+                  return (
+                    <motion.div
+                      key={dayNum}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: idx * 0.03 }}
+                      whileHover={{ scale: 1.08, rotate: 1 }}
+                      className="bg-gradient-to-br from-purple-50 to-blue-50 dark:from-gray-700 dark:to-gray-600 rounded-lg p-3 shadow hover:shadow-lg transition-all cursor-pointer"
+                    >
+                      <div className="text-center mb-2">
+                        <p className="text-lg font-bold text-purple-600 dark:text-purple-400">Day {dayNum}</p>
+                      </div>
+                      <div className="flex justify-center gap-1 mb-2">
+                        {dayPhotos.map((photo, pIdx) => (
+                          <div key={pIdx} className="w-2 h-2 bg-purple-400 dark:bg-purple-500 rounded-full" title={photo.mood}></div>
+                        ))}
+                      </div>
+                      <p className="text-xs text-center text-gray-600 dark:text-gray-300">
+                        {dayPhotos.map(p => p.mood).join(' · ')}
+                      </p>
+                    </motion.div>
+                  );
+                })}
+              </div>
 
-            {/* Progress Bar */}
-            <div className="relative h-4 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden mb-4">
-              <motion.div
-                initial={{ width: 0 }}
-                whileInView={{ width: '2.74%' }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, delay: 0.5 }}
-                className="absolute inset-y-0 left-0 bg-gradient-to-r from-rose-400 to-pink-500 rounded-full"
-              />
+              {/* Month Stats */}
+              <div className="grid md:grid-cols-4 gap-4 pt-6 border-t border-gray-200 dark:border-gray-700">
+                <div className="text-center p-4 bg-purple-50 dark:bg-gray-700 rounded-lg">
+                  <div className="text-3xl font-bold text-purple-600 dark:text-purple-400">30</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">{t.gallery.stats.recorded}</div>
+                </div>
+                <div className="text-center p-4 bg-blue-50 dark:bg-gray-700 rounded-lg">
+                  <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">10</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">Days Active</div>
+                </div>
+                <div className="text-center p-4 bg-pink-50 dark:bg-gray-700 rounded-lg">
+                  <div className="text-3xl font-bold text-pink-600 dark:text-pink-400">355</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">{t.gallery.stats.remaining}</div>
+                </div>
+                <div className="text-center p-4 bg-rose-50 dark:bg-gray-700 rounded-lg">
+                  <div className="text-3xl font-bold text-rose-600 dark:text-rose-400">∞</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">{t.gallery.stats.emotions}</div>
+                </div>
+              </div>
+
+              {/* Progress Bar */}
+              <div className="mt-6">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm font-medium text-gray-600 dark:text-gray-300">{t.gallery.progressTitle}</span>
+                  <span className="text-sm font-bold text-purple-600 dark:text-purple-400">2.74%</span>
+                </div>
+                <div className="relative h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                  <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: '2.74%' }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1.5, delay: 0.3 }}
+                    className="absolute inset-y-0 left-0 bg-gradient-to-r from-purple-400 via-pink-400 to-rose-400 rounded-full"
+                  />
+                </div>
+                <p className="text-xs text-center text-gray-500 dark:text-gray-400 mt-2">
+                  {t.gallery.progressCurrent} 10{t.gallery.day} {t.gallery.progressOf} 365{t.gallery.day}
+                </p>
+              </div>
+
+              {/* Notify Button */}
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="mt-6 w-full px-8 py-4 bg-gradient-to-r from-purple-500 via-pink-500 to-rose-500 text-white rounded-full font-bold text-lg shadow-lg hover:shadow-2xl transition-all"
+              >
+                {t.gallery.notifyButton}
+              </motion.button>
             </div>
-
-            <div className="grid grid-cols-3 gap-4 text-center">
-              <div>
-                <div className="text-2xl font-bold text-rose-500">30</div>
-                <div className="text-sm text-gray-500 dark:text-gray-400">{t.gallery.stats.recorded}</div>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-pink-500">355</div>
-                <div className="text-sm text-gray-500 dark:text-gray-400">{t.gallery.stats.remaining}</div>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-purple-500">∞</div>
-                <div className="text-sm text-gray-500 dark:text-gray-400">{t.gallery.stats.emotions}</div>
-              </div>
-            </div>
-
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="mt-6 w-full px-8 py-3 bg-gradient-to-r from-rose-400 to-pink-500 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-all"
-            >
-              {t.gallery.notifyButton}
-            </motion.button>
           </motion.div>
         </div>
       </section>
