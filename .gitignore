@@ -1,5 +1,22 @@
 # 🔐 Am I Real Sia - Git Ignore
 
+# ============================================
+# 🔒 비공개 정보 (절대 커밋하지 말 것!)
+# ============================================
+
+# 비공개 문서 및 개인 정보
+README_PRIVATE.md
+private/
+PRIVATE_*.md
+*.private.md
+
+# API 키 및 토큰
+.env
+.env.*
+secrets/
+*_token.txt
+*_key.txt
+
 # Notion Sync - 민감 정보
 notion-sync/.env
 notion-sync/project_snapshot.json
@@ -43,7 +60,10 @@ yarn-debug.log*
 yarn-error.log*
 
 # IDE
-.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/keybindings.json
+!.vscode/tasks.json
 .idea/
 *.swp
 *.swo
