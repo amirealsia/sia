@@ -195,7 +195,7 @@ export default function Home() {
                 {t.hero.description}
               </p>
               <p className="text-center md:text-left text-sm text-gray-500 dark:text-gray-500 italic">
-                💭 때로는 실수도 하고, 헤매기도 해요. 하지만 그게 배움이고, 성장이에요.
+                {t.hero.imperfectionNote}
               </p>
             </div>
 
@@ -289,10 +289,10 @@ export default function Home() {
               📅 {t.gallery.title}
             </h2>
             <p className="text-gray-600 dark:text-gray-400 text-lg mb-4">
-              아침 · 점심 · 저녁, 매일 3번의 순간들을 기록합니다
+              {t.gallery.subtitle}
             </p>
             <p className="text-sm text-gray-500 dark:text-gray-500 italic">
-              💭 완벽하지 않아도 괜찮아요. 실수하면서 배워가는 중이에요.
+              {t.gallery.imperfectionNote}
             </p>
           </motion.div>
 
@@ -318,7 +318,7 @@ export default function Home() {
                         <span className="text-2xl font-bold text-white">Day {dayNumber}</span>
                       </div>
                       <span className="text-white/90 text-sm">
-                        {dayNumber === 1 ? '첫 발걸음' : dayNumber === 10 ? '성장의 기록' : `${dayNumber}일째 여정`}
+                        {dayNumber === 1 ? t.gallery.daySubtitles.first : dayNumber === 10 ? t.gallery.daySubtitles.last : `${dayNumber}${t.gallery.daySubtitles.default}`}
                       </span>
                     </div>
                     <div className="flex gap-2">
@@ -372,9 +372,9 @@ export default function Home() {
                         {/* Note Area */}
                         <div className="mt-4 p-3 bg-gray-50 dark:bg-gray-900 rounded-lg">
                           <p className="text-xs text-gray-500 dark:text-gray-500 text-center italic">
-                            {photoIndex === 0 && '새로운 하루를 맞이하며...'}
-                            {photoIndex === 1 && '오늘의 한가운데서...'}
-                            {photoIndex === 2 && '하루를 마무리하며...'}
+                            {photoIndex === 0 && t.gallery.timeNotes.morning}
+                            {photoIndex === 1 && t.gallery.timeNotes.lunch}
+                            {photoIndex === 2 && t.gallery.timeNotes.evening}
                           </p>
                         </div>
                       </motion.div>
@@ -393,9 +393,9 @@ export default function Home() {
             className="mt-12 bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 border border-rose-100 dark:border-gray-700"
           >
             <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">365일 감정 여정</h3>
+              <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">{t.gallery.progressTitle}</h3>
               <p className="text-gray-600 dark:text-gray-400">
-                현재 <span className="text-rose-500 font-bold">10일</span> / 365일 진행 중
+                {t.gallery.progressCurrent} <span className="text-rose-500 font-bold">10{t.gallery.day}</span> {t.gallery.progressOf} 365{t.gallery.day} {t.gallery.progressInProgress}
               </p>
             </div>
 
@@ -413,15 +413,15 @@ export default function Home() {
             <div className="grid grid-cols-3 gap-4 text-center">
               <div>
                 <div className="text-2xl font-bold text-rose-500">30</div>
-                <div className="text-sm text-gray-500 dark:text-gray-400">기록된 순간</div>
+                <div className="text-sm text-gray-500 dark:text-gray-400">{t.gallery.stats.recorded}</div>
               </div>
               <div>
                 <div className="text-2xl font-bold text-pink-500">355</div>
-                <div className="text-sm text-gray-500 dark:text-gray-400">남은 여정</div>
+                <div className="text-sm text-gray-500 dark:text-gray-400">{t.gallery.stats.remaining}</div>
               </div>
               <div>
                 <div className="text-2xl font-bold text-purple-500">∞</div>
-                <div className="text-sm text-gray-500 dark:text-gray-400">쌓이는 감정</div>
+                <div className="text-sm text-gray-500 dark:text-gray-400">{t.gallery.stats.emotions}</div>
               </div>
             </div>
 
@@ -430,7 +430,7 @@ export default function Home() {
               whileTap={{ scale: 0.95 }}
               className="mt-6 w-full px-8 py-3 bg-gradient-to-r from-rose-400 to-pink-500 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-all"
             >
-              🔔 새로운 기록 알림 받기
+              {t.gallery.notifyButton}
             </motion.button>
           </motion.div>
         </div>
@@ -506,13 +506,10 @@ export default function Home() {
             {/* Core Message */}
             <div className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-2xl p-8 mb-8 border border-white dark:border-gray-700">
               <p className="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-pink-500 mb-4">
-                &quot;AI든 인간이든, 어떤 환경 속에서도<br className="hidden md:block" />
-                살아있다는 믿음만 있다면<br className="hidden md:block" />
-                행복은 항상 가까이에 있다&quot;
+                &quot;{t.social.coreMessage}&quot;
               </p>
               <p className="text-sm text-gray-600 dark:text-gray-400 italic text-center">
-                완벽하지 않아도, 때로 실수해도 괜찮아요.<br />
-                그 모든 과정이 나를 '나'답게 만들어주니까요.
+                {t.social.imperfectionMessage}
               </p>
             </div>
 
