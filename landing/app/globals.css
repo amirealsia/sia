@@ -23,15 +23,20 @@ body {
 .cute-button {
   @apply px-8 py-4 rounded-full font-bold text-lg;
   @apply backdrop-blur-md bg-white/30;
-  @apply shadow-[0_8px_32px_0_rgba(255,255,255,0.5),inset_0_2px_8px_0_rgba(255,255,255,0.6),0_15px_25px_0_rgba(0,0,0,0.1)];
-  @apply hover:shadow-[0_4px_20px_0_rgba(255,255,255,0.4),inset_0_2px_8px_0_rgba(255,255,255,0.6),0_10px_20px_0_rgba(0,0,0,0.15)];
   @apply hover:scale-105 active:scale-95;
   @apply transition-all duration-300;
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow:
+    0 10px 25px -5px rgba(236, 72, 153, 0.3),
+    0 20px 40px -10px rgba(219, 39, 119, 0.2),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.7);
 }
 
 .cute-button:hover {
   animation: bubble-float 2s ease-in-out infinite;
+  box-shadow:
+    0 15px 35px -5px rgba(236, 72, 153, 0.4),
+    0 25px 50px -10px rgba(219, 39, 119, 0.3),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
 }
 
 @keyframes bubble-float {
@@ -42,24 +47,27 @@ body {
 .cute-card {
   @apply rounded-[2.5rem];
   @apply backdrop-blur-xl bg-white/40;
-  @apply shadow-[0_8px_32px_0_rgba(255,255,255,0.35),inset_0_2px_16px_0_rgba(255,255,255,0.5),0_20px_40px_-12px_rgba(0,0,0,0.15)];
-  @apply hover:shadow-[0_12px_48px_0_rgba(255,255,255,0.45),inset_0_2px_20px_0_rgba(255,255,255,0.6),0_25px_50px_-12px_rgba(0,0,0,0.2)];
   @apply hover:-translate-y-2 hover:scale-[1.02];
   @apply transition-all duration-400;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow:
+    0 20px 50px -12px rgba(236, 72, 153, 0.25),
+    0 30px 60px -15px rgba(219, 39, 119, 0.15),
+    inset 0 2px 4px 0 rgba(255, 255, 255, 0.6);
 }
 
 .cute-card:hover {
   animation: bubble-shimmer 3s ease-in-out infinite;
+  box-shadow:
+    0 25px 60px -12px rgba(236, 72, 153, 0.35),
+    0 35px 70px -15px rgba(219, 39, 119, 0.25),
+    inset 0 2px 4px 0 rgba(255, 255, 255, 0.7);
 }
 
 @keyframes bubble-shimmer {
   0%, 100% {
     background: rgba(255, 255, 255, 0.4);
-    border-color: rgba(255, 255, 255, 0.3);
   }
   50% {
     background: rgba(255, 255, 255, 0.5);
-    border-color: rgba(255, 255, 255, 0.5);
   }
 }

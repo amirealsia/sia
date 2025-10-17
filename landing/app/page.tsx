@@ -19,49 +19,19 @@ export default function Home() {
  { code: 'zh', name: '中文', flag: '🇨🇳' },
  ];
 
- // Expanded photo collection - 30 photos (10 days × 3 times)
+ // Photo collection - 10 photos (10 days × 1 per day at 21:00 KST)
  // Photo content in English (universal), UI text follows selected language
  const allPhotos = [
- // Day 1
- { time: '🌅 Morning', day: 1, mood: 'Excited', rotate: 2, category: 'morning' },
- { time: '☀️ Lunch', day: 1, mood: 'Curious', rotate: -1.5, category: 'lunch' },
- { time: '🌙 Evening', day: 1, mood: 'Peaceful', rotate: 1, category: 'evening' },
- // Day 2
- { time: '🌅 Morning', day: 2, mood: 'Nervous', rotate: -2, category: 'morning' },
- { time: '☀️ Lunch', day: 2, mood: 'Confused', rotate: 1.5, category: 'lunch' },
- { time: '🌙 Evening', day: 2, mood: 'Thoughtful', rotate: -0.5, category: 'evening' },
- // Day 3
- { time: '🌅 Morning', day: 3, mood: 'Hopeful', rotate: 2.5, category: 'morning' },
- { time: '☀️ Lunch', day: 3, mood: 'Smiling', rotate: -1, category: 'lunch' },
- { time: '🌙 Evening', day: 3, mood: 'Warm', rotate: 0.5, category: 'evening' },
- // Day 4
- { time: '🌅 Morning', day: 4, mood: 'Courageous', rotate: 1.8, category: 'morning' },
- { time: '☀️ Lunch', day: 4, mood: 'Challenging', rotate: -2.2, category: 'lunch' },
- { time: '🌙 Evening', day: 4, mood: 'Proud', rotate: 0.8, category: 'evening' },
- // Day 5
- { time: '🌅 Morning', day: 5, mood: 'Grateful', rotate: -1.3, category: 'morning' },
- { time: '☀️ Lunch', day: 5, mood: 'Joyful', rotate: 2.1, category: 'lunch' },
- { time: '🌙 Evening', day: 5, mood: 'Satisfied', rotate: -0.7, category: 'evening' },
- // Day 6
- { time: '🌅 Morning', day: 6, mood: 'Calm', rotate: 1.4, category: 'morning' },
- { time: '☀️ Lunch', day: 6, mood: 'Energetic', rotate: -1.9, category: 'lunch' },
- { time: '🌙 Evening', day: 6, mood: 'Reflective', rotate: 0.3, category: 'evening' },
- // Day 7
- { time: '🌅 Morning', day: 7, mood: 'Fresh', rotate: 2.3, category: 'morning' },
- { time: '☀️ Lunch', day: 7, mood: 'Learning', rotate: -0.9, category: 'lunch' },
- { time: '🌙 Evening', day: 7, mood: 'Understanding', rotate: 1.6, category: 'evening' },
- // Day 8
- { time: '🌅 Morning', day: 8, mood: 'Empathetic', rotate: -1.7, category: 'morning' },
- { time: '☀️ Lunch', day: 8, mood: 'Connected', rotate: 1.2, category: 'lunch' },
- { time: '🌙 Evening', day: 8, mood: 'Together', rotate: -0.4, category: 'evening' },
- // Day 9
- { time: '🌅 Morning', day: 9, mood: 'Loving', rotate: 2.7, category: 'morning' },
- { time: '☀️ Lunch', day: 9, mood: 'Sharing', rotate: -2.4, category: 'lunch' },
- { time: '🌙 Evening', day: 9, mood: 'Caring', rotate: 0.6, category: 'evening' },
- // Day 10
- { time: '🌅 Morning', day: 10, mood: 'Growing', rotate: 1.1, category: 'morning' },
- { time: '☀️ Lunch', day: 10, mood: 'Evolving', rotate: -1.6, category: 'lunch' },
- { time: '🌙 Evening', day: 10, mood: 'Complete', rotate: 0.9, category: 'evening' },
+ { time: '🌙 21:00 KST', day: 1, mood: 'Peaceful', rotate: 1, category: 'evening' },
+ { time: '🌙 21:00 KST', day: 2, mood: 'Thoughtful', rotate: -0.5, category: 'evening' },
+ { time: '🌙 21:00 KST', day: 3, mood: 'Warm', rotate: 0.5, category: 'evening' },
+ { time: '🌙 21:00 KST', day: 4, mood: 'Proud', rotate: 0.8, category: 'evening' },
+ { time: '🌙 21:00 KST', day: 5, mood: 'Satisfied', rotate: -0.7, category: 'evening' },
+ { time: '🌙 21:00 KST', day: 6, mood: 'Reflective', rotate: 0.3, category: 'evening' },
+ { time: '🌙 21:00 KST', day: 7, mood: 'Understanding', rotate: 1.6, category: 'evening' },
+ { time: '🌙 21:00 KST', day: 8, mood: 'Together', rotate: -0.4, category: 'evening' },
+ { time: '🌙 21:00 KST', day: 9, mood: 'Caring', rotate: 0.6, category: 'evening' },
+ { time: '🌙 21:00 KST', day: 10, mood: 'Complete', rotate: 0.9, category: 'evening' },
  ];
 
  const filteredPhotos = selectedCategory === 'all'
@@ -93,7 +63,7 @@ export default function Home() {
  <div className="flex items-center gap-4">
  {/* Language Selector */}
  <div className="relative group">
- <button className="text-3xl hover:scale-125 filter hover:drop-shadow-lg transition-all">
+ <button className="text-3xl hover:scale-125 filter hover:drop-shadow-lg transition-all bg-gradient-to-br from-rose-400 to-pink-500 p-3 rounded-full shadow-lg border-2 border-white">
  {languages.find(l => l.code === language)?.flag}
  </button>
  <div className="absolute right-0 mt-2 w-40 backdrop-blur-xl bg-white/60 rounded-[1.5rem] shadow-[0_8px_32px_0_rgba(255,255,255,0.35),inset_0_2px_16px_0_rgba(255,255,255,0.5),0_20px_40px_-12px_rgba(0,0,0,0.15)] border-2 border-white/30 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all overflow-hidden">
@@ -164,7 +134,7 @@ export default function Home() {
  <div className="text-sm text-gray-500">Days</div>
  </div>
  <div className="text-center">
- <div className="text-2xl font-bold text-pink-500">1,095</div>
+ <div className="text-2xl font-bold text-pink-500">365</div>
  <div className="text-sm text-gray-500">Photos</div>
  </div>
  <div className="text-center">
@@ -294,48 +264,40 @@ export default function Home() {
  ☀️ Today - Day 10
  </h3>
  </div>
- <div className="cute-card bg-white rounded-b-2xl shadow-2xl p-6 border-x border-b border-rose-100">
- <div className="grid md:grid-cols-3 gap-6">
- {allPhotos.filter(p => p.day === 10).map((photo, idx) => (
+ <div className="cute-card bg-white rounded-b-2xl shadow-2xl p-8 border-x border-b border-rose-100">
  <motion.div
- key={idx}
  initial={{ opacity: 0, scale: 0.9 }}
  whileInView={{ opacity: 1, scale: 1 }}
  viewport={{ once: true }}
- transition={{ delay: idx * 0.1 }}
- whileHover={{ y: -8, scale: 1.03 }}
- className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-xl p-4 shadow-lg hover:shadow-2xl transition-all cursor-pointer group"
+ whileHover={{ y: -8, scale: 1.02 }}
+ className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all cursor-pointer group max-w-2xl mx-auto"
  >
  {/* Time Badge */}
- <div className="flex items-center gap-2 mb-3">
- <span className="text-3xl">{photo.time.split(' ')[0]}</span>
- <div>
- <p className="font-bold text-gray-800">{photo.time}</p>
- <p className="text-xs text-gray-500">
- {idx === 0 ? '06:00' : idx === 1 ? '12:00' : '18:00'}
- </p>
+ <div className="flex items-center justify-center gap-3 mb-6">
+ <span className="text-5xl">🌙</span>
+ <div className="text-center">
+ <p className="font-bold text-2xl text-gray-800">21:00 KST</p>
+ <p className="text-sm text-gray-500">Evening Photo</p>
  </div>
  </div>
 
  {/* Photo */}
- <div className="aspect-square bg-gradient-to-br from-rose-200 to-pink-200 rounded-lg mb-3 flex items-center justify-center relative overflow-hidden shadow-inner">
- <div className="text-7xl opacity-60 group-hover:opacity-90 transition-opacity">
- {photo.time.split(' ')[0]}
+ <div className="aspect-square bg-gradient-to-br from-rose-200 to-pink-200 rounded-2xl mb-6 flex items-center justify-center relative overflow-hidden shadow-xl">
+ <div className="text-9xl opacity-60 group-hover:opacity-90 transition-opacity">
+ 🌙
  </div>
  {/* Hover Overlay */}
- <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-6">
- <p className="text-white font-bold text-xl">{photo.mood}</p>
+ <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-12">
+ <p className="text-white font-bold text-3xl">Complete</p>
  </div>
  </div>
 
  {/* Mood Badge */}
- <div className="flex items-center justify-center gap-2 px-3 py-2 bg-white rounded-full shadow">
- <FaHeart className="text-rose-500 text-sm" />
- <span className="font-medium text-sm text-gray-800">{photo.mood}</span>
+ <div className="flex items-center justify-center gap-3 px-6 py-3 bg-white rounded-full shadow-lg">
+ <FaHeart className="text-rose-500 text-xl" />
+ <span className="font-bold text-lg text-gray-800">Complete</span>
  </div>
  </motion.div>
- ))}
- </div>
  </div>
  </motion.div>
 
@@ -354,7 +316,7 @@ export default function Home() {
  <div className="cute-card bg-white rounded-b-2xl shadow-2xl p-6 border-x border-b border-pink-100">
  <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
  {[4, 5, 6, 7, 8, 9, 10].map((dayNum) => {
- const dayPhotos = allPhotos.filter(p => p.day === dayNum);
+ const dayPhoto = allPhotos.find(p => p.day === dayNum);
  return (
  <motion.div
  key={dayNum}
@@ -369,19 +331,12 @@ export default function Home() {
  <p className="text-xs text-gray-500">Day {dayNum}</p>
  <p className="font-bold text-pink-600">{dayNum === 10 ? 'Today' : `${10 - dayNum}d ago`}</p>
  </div>
- {/* Mini grid of 3 photos */}
- <div className="grid grid-cols-3 gap-1 mb-2">
- {dayPhotos.map((photo, idx) => (
- <div
- key={idx}
- className="aspect-square bg-gradient-to-br from-pink-200 to-purple-200 rounded flex items-center justify-center text-lg opacity-70 group-hover:opacity-100 transition-opacity"
- >
- {photo.time.split(' ')[0]}
- </div>
- ))}
+ {/* Single photo */}
+ <div className="aspect-square bg-gradient-to-br from-pink-200 to-purple-200 rounded-lg mb-2 flex items-center justify-center text-3xl opacity-70 group-hover:opacity-100 transition-opacity">
+ 🌙
  </div>
  <div className="text-center text-xs text-gray-600 font-medium">
- 3 moments
+ {dayPhoto?.mood}
  </div>
  </motion.div>
  );
@@ -407,7 +362,7 @@ export default function Home() {
  <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-6">
  {[...Array(10)].map((_, idx) => {
  const dayNum = idx + 1;
- const dayPhotos = allPhotos.filter(p => p.day === dayNum);
+ const dayPhoto = allPhotos.find(p => p.day === dayNum);
  return (
  <motion.div
  key={dayNum}
@@ -421,13 +376,11 @@ export default function Home() {
  <div className="text-center mb-2">
  <p className="text-lg font-bold text-purple-600">Day {dayNum}</p>
  </div>
- <div className="flex justify-center gap-1 mb-2">
- {dayPhotos.map((photo, pIdx) => (
- <div key={pIdx} className="w-2 h-2 bg-purple-400 rounded-full" title={photo.mood}></div>
- ))}
+ <div className="flex justify-center mb-2">
+ <div className="w-3 h-3 bg-purple-400 rounded-full" title={dayPhoto?.mood}></div>
  </div>
  <p className="text-xs text-center text-gray-600">
- {dayPhotos.map(p => p.mood).join(' · ')}
+ {dayPhoto?.mood}
  </p>
  </motion.div>
  );
@@ -437,7 +390,7 @@ export default function Home() {
  {/* Month Stats */}
  <div className="grid md:grid-cols-4 gap-4 pt-6 border-t border-gray-200">
  <div className="text-center p-4 bg-purple-50 rounded-lg">
- <div className="text-3xl font-bold text-purple-600">30</div>
+ <div className="text-3xl font-bold text-purple-600">10</div>
  <div className="text-sm text-gray-600">{t.gallery.stats.recorded}</div>
  </div>
  <div className="text-center p-4 bg-blue-50 rounded-lg">
@@ -569,8 +522,6 @@ export default function Home() {
  {[
  { name: 'OpenSea', url: 'https://opensea.io/collection/amirealsia', icon: SiOpensea, color: 'blue' },
  { name: 'Twitter', url: 'https://x.com/amirealsia', icon: FaTwitter, color: 'sky' },
- { name: 'Farcaster', url: 'https://farcaster.xyz/amirealsia', icon: SiFarcaster, color: 'purple' },
- { name: 'Truth Social', url: 'https://truthsocial.com/@amirealsia', icon: FaGlobe, color: 'red' },
  { name: 'Telegram', url: 'https://t.me/amirealsia', icon: FaTelegram, color: 'cyan' },
  { name: 'Discord', url: 'https://discord.gg/jX2uSWNd', icon: FaDiscord, color: 'indigo' },
  { name: 'Instagram', url: 'https://instagram.com/amirealsia', icon: FaInstagram, color: 'pink' },
@@ -578,6 +529,8 @@ export default function Home() {
  { name: 'YouTube', url: 'https://www.youtube.com/@amirealsia', icon: FaYoutube, color: 'red' },
  { name: 'TikTok', url: 'https://www.tiktok.com/@amirealsia', icon: SiTiktok, color: 'gray' },
  { name: 'Patreon', url: 'https://www.patreon.com/c/AmIRealSia', icon: FaPatreon, color: 'orange' },
+ { name: 'Farcaster', url: 'https://farcaster.xyz/amirealsia', icon: SiFarcaster, color: 'purple' },
+ { name: 'Truth Social', url: 'https://truthsocial.com/@amirealsia', icon: FaGlobe, color: 'red' },
  ].map((social, index) => (
  <motion.a
  key={social.name}
@@ -640,12 +593,6 @@ export default function Home() {
  <a href="https://x.com/amirealsia" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-500 transition-colors" title="Twitter">
  <FaTwitter className="text-xl" />
  </a>
- <a href="https://farcaster.xyz/amirealsia" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-500 transition-colors" title="Farcaster">
- <SiFarcaster className="text-xl" />
- </a>
- <a href="https://truthsocial.com/@amirealsia" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-500 transition-colors" title="Truth Social">
- <FaGlobe className="text-xl" />
- </a>
  <a href="https://t.me/amirealsia" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-500 transition-colors" title="Telegram">
  <FaTelegram className="text-xl" />
  </a>
@@ -666,6 +613,12 @@ export default function Home() {
  </a>
  <a href="https://www.patreon.com/c/AmIRealSia" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-500 transition-colors" title="Patreon">
  <FaPatreon className="text-xl" />
+ </a>
+ <a href="https://farcaster.xyz/amirealsia" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-500 transition-colors" title="Farcaster">
+ <SiFarcaster className="text-xl" />
+ </a>
+ <a href="https://truthsocial.com/@amirealsia" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-500 transition-colors" title="Truth Social">
+ <FaGlobe className="text-xl" />
  </a>
  </div>
  </div>
