@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "flag-icons": "^7.5.0",
     "framer-motion": "^12.23.24",
     "next": "15.5.5",
     "next-intl": "^4.3.12",

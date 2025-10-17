@@ -1,0 +1,10 @@
+# robots.txt for Am I Real Sia
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://amirealsia.com/sitemap.xml
+
+# Crawl-delay for well-behaved bots
+Crawl-delay: 1
