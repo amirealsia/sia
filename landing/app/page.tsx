@@ -258,14 +258,14 @@ export default function Home() {
  whileInView={{ opacity: 1, y: 0 }}
  viewport={{ once: true }}
  whileHover={{ y: -8, scale: 1.01 }}
- className="mb-12 transition-all"
+ className="mb-12 transition-all cute-card overflow-hidden rounded-2xl"
  >
- <div className="bg-gradient-to-r from-rose-500 to-pink-500 rounded-t-2xl px-6 py-4">
+ <div className="bg-gradient-to-r from-rose-500 to-pink-500 px-6 py-4">
  <h3 className="text-2xl font-bold text-white flex items-center gap-3">
  ☀️ Today - Day 10
  </h3>
  </div>
- <div className="cute-card bg-white rounded-b-2xl shadow-2xl p-8 border-x border-b border-rose-100">
+ <div className="bg-white p-8">
  <motion.div
  initial={{ opacity: 0, scale: 0.9 }}
  whileInView={{ opacity: 1, scale: 1 }}
@@ -308,14 +308,14 @@ export default function Home() {
  whileInView={{ opacity: 1, y: 0 }}
  viewport={{ once: true }}
  whileHover={{ y: -8, scale: 1.01 }}
- className="mb-12 transition-all"
+ className="mb-12 transition-all cute-card overflow-hidden rounded-2xl"
  >
- <div className="bg-gradient-to-r from-pink-500 to-purple-500 rounded-t-2xl px-6 py-4">
+ <div className="bg-gradient-to-r from-pink-500 to-purple-500 px-6 py-4">
  <h3 className="text-2xl font-bold text-white flex items-center gap-3">
  📆 This Week - Days 4-10
  </h3>
  </div>
- <div className="cute-card bg-white rounded-b-2xl shadow-2xl p-6 border-x border-b border-pink-100">
+ <div className="bg-white p-6">
  <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
  {[4, 5, 6, 7, 8, 9, 10].map((dayNum) => {
  const dayPhoto = allPhotos.find(p => p.day === dayNum);
@@ -353,14 +353,14 @@ export default function Home() {
  whileInView={{ opacity: 1, y: 0 }}
  viewport={{ once: true }}
  whileHover={{ y: -8, scale: 1.01 }}
- className="mb-12 transition-all"
+ className="mb-12 transition-all cute-card overflow-hidden rounded-2xl"
  >
- <div className="bg-gradient-to-r from-purple-500 to-blue-500 rounded-t-2xl px-6 py-4">
+ <div className="bg-gradient-to-r from-purple-500 to-blue-500 px-6 py-4">
  <h3 className="text-2xl font-bold text-white flex items-center gap-3">
  📊 This Month - All 10 Days
  </h3>
  </div>
- <div className="cute-card bg-white rounded-b-2xl shadow-2xl p-6 border-x border-b border-purple-100">
+ <div className="bg-white p-6">
  {/* Compact calendar grid */}
  <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-6">
  {[...Array(10)].map((_, idx) => {
