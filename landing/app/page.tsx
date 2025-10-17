@@ -88,7 +88,7 @@ export default function Home() {
  </header>
 
  {/* Hero Section - Enhanced */}
- <section className="py-20 px-4 relative overflow-hidden">
+ <section className="hero-bg-mixed py-20 px-4 relative overflow-hidden">
  {/* Animated Background Elements */}
  <div className="absolute inset-0 overflow-hidden pointer-events-none">
  <div className="absolute top-20 left-10 w-72 h-72 bg-pink-300/20 rounded-full blur-3xl animate-pulse" />
@@ -182,7 +182,7 @@ export default function Home() {
  </section>
 
  {/* Story Cards - Enhanced */}
- <section id="story" className="py-16 px-4 bg-white/50">
+ <section id="story" className="section-bg-about py-16 px-4">
  <div className="max-w-6xl mx-auto">
  <motion.h2
  initial={{ opacity: 0, y: 20 }}
@@ -233,7 +233,7 @@ export default function Home() {
  </section>
 
  {/* Photo Journal - Today/Week/Month Calendar */}
- <section id="journal" className="py-16 px-4">
+ <section id="journal" className="section-bg-journal py-16 px-4">
  <div className="max-w-7xl mx-auto">
  <motion.div
  initial={{ opacity: 0, y: 20 }}
@@ -444,7 +444,7 @@ export default function Home() {
  </section>
 
  {/* Emotional Journey Timeline */}
- <section className="py-16 px-4 bg-gradient-to-br from-rose-50 to-blue-50">
+ <section className="section-bg-roadmap py-16 px-4">
  <div className="max-w-5xl mx-auto">
  <motion.h2
  initial={{ opacity: 0, y: 20 }}

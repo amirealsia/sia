@@ -71,3 +71,139 @@ body {
     background: rgba(255, 255, 255, 0.5);
   }
 }
+
+/* Hero Background: Reality meets Digital Circuit Board */
+.hero-bg-mixed {
+  position: relative;
+  background: linear-gradient(135deg,
+    #fce7f3 0%,    /* soft pink (reality) */
+    #e9d5ff 25%,   /* soft purple */
+    #ddd6fe 50%,   /* lavender */
+    #bfdbfe 75%,   /* soft blue (digital) */
+    #dbeafe 100%   /* sky blue */
+  );
+  overflow: hidden;
+}
+
+.hero-bg-mixed::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    /* Circuit board pattern - right side */
+    linear-gradient(90deg, transparent 0%, transparent 45%, rgba(139, 92, 246, 0.03) 55%, rgba(139, 92, 246, 0.05) 100%),
+    /* Horizontal circuit lines */
+    repeating-linear-gradient(0deg, transparent, transparent 35px, rgba(139, 92, 246, 0.1) 35px, rgba(139, 92, 246, 0.1) 37px),
+    /* Vertical circuit lines */
+    repeating-linear-gradient(90deg, transparent, transparent 35px, rgba(139, 92, 246, 0.1) 35px, rgba(139, 92, 246, 0.1) 37px),
+    /* Organic flowing pattern - left side */
+    radial-gradient(ellipse at 0% 50%, rgba(236, 72, 153, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 80%, rgba(219, 39, 119, 0.06) 0%, transparent 40%);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.hero-bg-mixed::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Glowing circuit nodes */
+  background-image:
+    radial-gradient(circle at 85% 20%, rgba(139, 92, 246, 0.4) 0%, transparent 3px),
+    radial-gradient(circle at 90% 45%, rgba(139, 92, 246, 0.3) 0%, transparent 2px),
+    radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.4) 0%, transparent 3px),
+    radial-gradient(circle at 95% 85%, rgba(139, 92, 246, 0.3) 0%, transparent 2px),
+    /* Warm glow on reality side */
+    radial-gradient(ellipse at 10% 30%, rgba(251, 207, 232, 0.3) 0%, transparent 40%);
+  animation: circuit-glow 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes circuit-glow {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 0.9; }
+}
+
+/* Section Backgrounds */
+.section-bg-about {
+  background: linear-gradient(135deg, #fef3c7 0%, #fce7f3 50%, #e0e7ff 100%);
+  position: relative;
+}
+
+.section-bg-about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(251, 191, 36, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(167, 139, 250, 0.08) 0%, transparent 50%);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.section-bg-journal {
+  background: linear-gradient(135deg, #dbeafe 0%, #e9d5ff 50%, #fce7f3 100%);
+  position: relative;
+}
+
+.section-bg-journal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    repeating-linear-gradient(45deg, transparent, transparent 60px, rgba(139, 92, 246, 0.03) 60px, rgba(139, 92, 246, 0.03) 62px),
+    repeating-linear-gradient(-45deg, transparent, transparent 60px, rgba(236, 72, 153, 0.03) 60px, rgba(236, 72, 153, 0.03) 62px);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.section-bg-roadmap {
+  background: linear-gradient(135deg, #e0e7ff 0%, #ddd6fe 50%, #fce7f3 100%);
+  position: relative;
+}
+
+.section-bg-roadmap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    radial-gradient(circle at 10% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 90% 50%, rgba(236, 72, 153, 0.1) 0%, transparent 40%);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.section-bg-technical {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dbeafe 50%, #e9d5ff 100%);
+  position: relative;
+}
+
+.section-bg-technical::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(34, 197, 94, 0.05) 40px, rgba(34, 197, 94, 0.05) 42px),
+    repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(59, 130, 246, 0.05) 40px, rgba(59, 130, 246, 0.05) 42px);
+  opacity: 0.6;
+  pointer-events: none;
+}
