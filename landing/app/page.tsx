@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaInstagram, FaHeart, FaSun, FaMoon, FaTwitter, FaDiscord, FaTelegram, FaYoutube, FaTiktok, FaPatreon } from 'react-icons/fa';
+import { FaInstagram, FaHeart, FaSun, FaMoon, FaTwitter, FaDiscord, FaTelegram, FaYoutube, FaTiktok, FaPatreon, FaLinkedin } from 'react-icons/fa';
 import { SiOpensea, SiTiktok } from 'react-icons/si';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTheme } from '@/contexts/ThemeContext';
@@ -587,6 +587,7 @@ export default function Home() {
                 { name: 'Telegram', url: 'https://t.me/amirealsia', icon: FaTelegram, color: 'cyan' },
                 { name: 'Discord', url: 'https://discord.gg/jX2uSWNd', icon: FaDiscord, color: 'indigo' },
                 { name: 'Instagram', url: 'https://instagram.com/amirealsia', icon: FaInstagram, color: 'pink' },
+                { name: 'LinkedIn', url: '#linkedin', icon: FaLinkedin, color: 'blue' },
                 { name: 'YouTube', url: '#youtube', icon: FaYoutube, color: 'red' },
                 { name: 'TikTok', url: '#tiktok', icon: SiTiktok, color: 'gray' },
                 { name: 'Patreon', url: '#patreon', icon: FaPatreon, color: 'orange' },
@@ -660,6 +661,9 @@ export default function Home() {
                 </a>
                 <a href="https://instagram.com/amirealsia" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-500 dark:hover:text-rose-400 transition-colors" title="Instagram">
                   <FaInstagram className="text-xl" />
+                </a>
+                <a href="#linkedin" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-500 dark:hover:text-rose-400 transition-colors" title="LinkedIn">
+                  <FaLinkedin className="text-xl" />
                 </a>
                 <a href="#youtube" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-500 dark:hover:text-rose-400 transition-colors" title="YouTube">
                   <FaYoutube className="text-xl" />
