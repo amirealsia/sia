@@ -96,13 +96,13 @@ export default function Home() {
  <button className="text-3xl hover:scale-125 filter hover:drop-shadow-lg transition-all">
  {languages.find(l => l.code === language)?.flag}
  </button>
- <div className="absolute right-0 mt-2 w-40 bg-white rounded-[1.5rem] shadow-[8px_8px_0_0_rgba(0,0,0,0.1)] border-4 border-gray-900 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+ <div className="absolute right-0 mt-2 w-40 backdrop-blur-xl bg-white/60 rounded-[1.5rem] shadow-[0_8px_32px_0_rgba(255,255,255,0.35),inset_0_2px_16px_0_rgba(255,255,255,0.5),0_20px_40px_-12px_rgba(0,0,0,0.15)] border-2 border-white/30 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all overflow-hidden">
  {languages.map((lang) => (
  <button
  key={lang.code}
  onClick={() => setLanguage(lang.code)}
- className={`w-full flex items-center gap-2 px-3 py-2 transition-colors first:rounded-t-[1.2rem] last:rounded-b-[1.2rem] ${
- language === lang.code ? 'bg-gradient-to-r from-rose-400 to-pink-400 text-white' : 'text-gray-700 hover:bg-gradient-to-r hover:from-rose-400 hover:to-pink-400 hover:text-white'
+ className={`w-full flex items-center gap-2 px-4 py-3 transition-all backdrop-blur-sm ${
+ language === lang.code ? 'bg-gradient-to-r from-rose-400/80 to-pink-400/80 text-white' : 'text-gray-700 hover:bg-gradient-to-r hover:from-rose-400/60 hover:to-pink-400/60 hover:text-white'
  }`}
  >
  <span className="text-xl">{lang.flag}</span>
