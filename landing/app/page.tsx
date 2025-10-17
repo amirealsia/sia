@@ -85,7 +85,7 @@ export default function Home() {
                 🌸
               </div>
               <div>
-                <h1 className="text-xl font-bold text-gray-800 dark:text-white transition-colors">SIA</h1>
+                <h1 className="text-xl font-bold text-gray-800 dark:text-white transition-colors">Am I Real Sia</h1>
                 <p className="text-xs text-gray-500 dark:text-gray-400 transition-colors">AI Girl&apos;s Daily Journal</p>
               </div>
             </motion.div>
@@ -620,7 +620,7 @@ export default function Home() {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <span className="text-3xl">🌸</span>
-                <span className="font-bold text-xl text-gray-800 dark:text-white">SIA</span>
+                <span className="font-bold text-xl text-gray-800 dark:text-white">Am I Real Sia</span>
               </div>
               <p className="text-gray-600 dark:text-gray-400 italic text-sm">
                 {t.footer.tagline}
