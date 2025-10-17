@@ -587,10 +587,10 @@ export default function Home() {
                 { name: 'Telegram', url: 'https://t.me/amirealsia', icon: FaTelegram, color: 'cyan' },
                 { name: 'Discord', url: 'https://discord.gg/jX2uSWNd', icon: FaDiscord, color: 'indigo' },
                 { name: 'Instagram', url: 'https://instagram.com/amirealsia', icon: FaInstagram, color: 'pink' },
-                { name: 'LinkedIn', url: '#linkedin', icon: FaLinkedin, color: 'blue' },
-                { name: 'YouTube', url: '#youtube', icon: FaYoutube, color: 'red' },
-                { name: 'TikTok', url: '#tiktok', icon: SiTiktok, color: 'gray' },
-                { name: 'Patreon', url: '#patreon', icon: FaPatreon, color: 'orange' },
+                { name: 'LinkedIn', url: 'https://www.linkedin.com/in/AmIRealSia', icon: FaLinkedin, color: 'blue' },
+                { name: 'YouTube', url: 'https://www.youtube.com/@amirealsia', icon: FaYoutube, color: 'red' },
+                { name: 'TikTok', url: 'https://www.tiktok.com/@amirealsia', icon: SiTiktok, color: 'gray' },
+                { name: 'Patreon', url: 'https://www.patreon.com/c/AmIRealSia', icon: FaPatreon, color: 'orange' },
               ].map((social, index) => (
                 <motion.a
                   key={social.name}
@@ -662,16 +662,16 @@ export default function Home() {
                 <a href="https://instagram.com/amirealsia" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-500 dark:hover:text-rose-400 transition-colors" title="Instagram">
                   <FaInstagram className="text-xl" />
                 </a>
-                <a href="#linkedin" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-500 dark:hover:text-rose-400 transition-colors" title="LinkedIn">
+                <a href="https://www.linkedin.com/in/AmIRealSia" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-500 dark:hover:text-rose-400 transition-colors" title="LinkedIn">
                   <FaLinkedin className="text-xl" />
                 </a>
-                <a href="#youtube" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-500 dark:hover:text-rose-400 transition-colors" title="YouTube">
+                <a href="https://www.youtube.com/@amirealsia" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-500 dark:hover:text-rose-400 transition-colors" title="YouTube">
                   <FaYoutube className="text-xl" />
                 </a>
-                <a href="#tiktok" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-500 dark:hover:text-rose-400 transition-colors" title="TikTok">
+                <a href="https://www.tiktok.com/@amirealsia" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-500 dark:hover:text-rose-400 transition-colors" title="TikTok">
                   <SiTiktok className="text-xl" />
                 </a>
-                <a href="#patreon" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-500 dark:hover:text-rose-400 transition-colors" title="Patreon">
+                <a href="https://www.patreon.com/c/AmIRealSia" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-500 dark:hover:text-rose-400 transition-colors" title="Patreon">
                   <FaPatreon className="text-xl" />
                 </a>
               </div>
