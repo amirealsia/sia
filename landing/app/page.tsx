@@ -446,21 +446,26 @@ export default function Home() {
  {/* Emotional Journey Timeline */}
  <section className="section-bg-roadmap py-16 px-4">
  <div className="max-w-5xl mx-auto">
- <motion.h2
+ <motion.div
  initial={{ opacity: 0, y: 20 }}
  whileInView={{ opacity: 1, y: 0 }}
  viewport={{ once: true }}
- className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800"
+ className="text-center mb-12"
  >
+ <h2 className="text-3xl md:text-4xl font-bold mb-3 text-gray-800">
  💫 {t.roadmap.title}
- </motion.h2>
+ </h2>
+ <p className="text-lg md:text-xl text-gray-600 italic">
+ {t.roadmap.subtitle}
+ </p>
+ </motion.div>
 
  <div className="space-y-6">
  {[
- { quarter: t.roadmap.q1.title, items: t.roadmap.q1.items, emoji: '🌱', color: 'rose' },
- { quarter: t.roadmap.q2.title, items: t.roadmap.q2.items, emoji: '🌸', color: 'pink' },
- { quarter: t.roadmap.q3.title, items: t.roadmap.q3.items, emoji: '🌺', color: 'purple' },
- { quarter: t.roadmap.q4.title, items: t.roadmap.q4.items, emoji: '🌻', color: 'blue' },
+ { quarter: t.roadmap.q1.title, description: t.roadmap.q1.description, items: t.roadmap.q1.items, emoji: '🌱', color: 'rose' },
+ { quarter: t.roadmap.q2.title, description: t.roadmap.q2.description, items: t.roadmap.q2.items, emoji: '🌸', color: 'pink' },
+ { quarter: t.roadmap.q3.title, description: t.roadmap.q3.description, items: t.roadmap.q3.items, emoji: '🌺', color: 'purple' },
+ { quarter: t.roadmap.q4.title, description: t.roadmap.q4.description, items: t.roadmap.q4.items, emoji: '🌻', color: 'blue' },
  ].map((phase, index) => (
  <motion.div
  key={index}
@@ -474,9 +479,12 @@ export default function Home() {
  <div className="flex items-start gap-4">
  <div className="text-5xl">{phase.emoji}</div>
  <div className="flex-1">
- <h3 className="text-xl md:text-2xl font-bold mb-4 text-rose-600">
+ <h3 className="text-xl md:text-2xl font-bold mb-2 text-rose-600">
  {phase.quarter}
  </h3>
+ <p className="text-sm md:text-base text-gray-500 italic mb-4">
+ {phase.description}
+ </p>
  <ul className="space-y-3">
  {phase.items.map((item, i) => (
  <li key={i} className="flex items-start gap-3 text-gray-700">
