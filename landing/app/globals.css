@@ -10,16 +10,39 @@
     --background: 0 0% 100%;
     --foreground: 0 0% 9%;
   }
-
-  .dark {
-    --background: 0 0% 4%;
-    --foreground: 0 0% 93%;
-  }
 }
 
 body {
-  background-color: hsl(var(--background));
+  background: linear-gradient(180deg, #E8D5E8 0%, #D5E5F5 50%, #E5F5E5 100%);
+  background-attachment: fixed;
   color: hsl(var(--foreground));
   font-family: Arial, Helvetica, sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Cute NFT Design Styles */
+.cute-button {
+  @apply px-8 py-4 rounded-full font-bold text-lg;
+  @apply shadow-[0_8px_0_0_rgba(0,0,0,0.15)];
+  @apply hover:shadow-[0_4px_0_0_rgba(0,0,0,0.15)];
+  @apply active:shadow-[0_2px_0_0_rgba(0,0,0,0.15)];
+  @apply hover:translate-y-1 active:translate-y-2;
+  @apply transition-all duration-150;
+  @apply border-4 border-gray-900;
+}
+
+.cute-button:hover {
+  animation: bounce 0.5s ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.cute-card {
+  @apply rounded-[2.5rem] border-4 border-gray-900;
+  @apply shadow-[10px_10px_0_0_rgba(0,0,0,0.15)];
+  @apply hover:shadow-[15px_15px_0_0_rgba(0,0,0,0.2)];
+  @apply hover:-translate-y-1;
+  @apply transition-all duration-300;
 }

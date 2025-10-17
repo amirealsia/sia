@@ -1,8 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaInstagram, FaHeart, FaSun, FaMoon, FaTwitter, FaDiscord, FaTelegram, FaYoutube, FaTiktok, FaPatreon, FaLinkedin } from 'react-icons/fa';
-import { SiOpensea, SiTiktok } from 'react-icons/si';
+import { FaInstagram, FaHeart, FaSun, FaMoon, FaTwitter, FaDiscord, FaTelegram, FaYoutube, FaTiktok, FaPatreon, FaLinkedin, FaGlobe } from 'react-icons/fa';
+import { SiOpensea, SiTiktok, SiFarcaster } from 'react-icons/si';
 import { useLanguage } from '@/contexts/LanguageContext';
 // Theme context removed - light mode only
 import type { Language } from '@/lib/translations';
@@ -80,7 +80,7 @@ export default function Home() {
  animate={{ opacity: 1, x: 0 }}
  className="flex items-center gap-3"
  >
- <div className="w-12 h-12 bg-gradient-to-br from-rose-400 to-pink-500 rounded-full flex items-center justify-center text-white text-xl shadow-lg">
+ <div className="w-16 h-16 bg-gradient-to-br from-rose-400 to-pink-500 rounded-full flex items-center justify-center text-white text-3xl shadow-lg border-4 border-white shadow-[4px_4px_0_0_rgba(0,0,0,0.1)]">
  🌸
  </div>
  <div>
@@ -93,20 +93,20 @@ export default function Home() {
  <div className="flex items-center gap-4">
  {/* Language Selector */}
  <div className="relative group">
- <button className="text-2xl hover:scale-110 transition-transform">
+ <button className="text-3xl hover:scale-125 filter hover:drop-shadow-lg transition-all">
  {languages.find(l => l.code === language)?.flag}
  </button>
- <div className="absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+ <div className="absolute right-0 mt-2 w-40 bg-white rounded-[1.5rem] shadow-[8px_8px_0_0_rgba(0,0,0,0.1)] border-4 border-gray-900 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
  {languages.map((lang) => (
  <button
  key={lang.code}
  onClick={() => setLanguage(lang.code)}
- className={`w-full flex items-center gap-2 px-3 py-2 hover:bg-rose-50 transition-colors first:rounded-t-lg last:rounded-b-lg ${
- language === lang.code ? 'bg-rose-50 text-rose-600' : 'text-gray-700'
+ className={`w-full flex items-center gap-2 px-3 py-2 transition-colors first:rounded-t-[1.2rem] last:rounded-b-[1.2rem] ${
+ language === lang.code ? 'bg-gradient-to-r from-rose-400 to-pink-400 text-white' : 'text-gray-700 hover:bg-gradient-to-r hover:from-rose-400 hover:to-pink-400 hover:text-white'
  }`}
  >
- <span>{lang.flag}</span>
- <span className="text-sm">{lang.name}</span>
+ <span className="text-xl">{lang.flag}</span>
+ <span className="text-sm font-bold">{lang.name}</span>
  </button>
  ))}
  </div>
@@ -130,7 +130,7 @@ export default function Home() {
  initial={{ opacity: 0, y: 30 }}
  animate={{ opacity: 1, y: 0 }}
  transition={{ duration: 0.8 }}
- className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl p-8 md:p-12 border border-rose-100"
+ className="cute-card bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl p-8 md:p-12 border border-rose-100"
  >
  {/* Profile Section */}
  <div className="flex flex-col md:flex-row items-center gap-8 mb-8">
@@ -191,7 +191,7 @@ export default function Home() {
  href="#journal"
  whileHover={{ scale: 1.05 }}
  whileTap={{ scale: 0.95 }}
- className="px-8 py-4 bg-gradient-to-r from-rose-400 to-pink-500 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-all text-center"
+ className="cute-button px-8 py-4 bg-gradient-to-r from-yellow-400 via-pink-400 to-rose-500 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-all text-center"
  >
  📖 {t.hero.explore}
  </motion.a>
@@ -202,7 +202,7 @@ export default function Home() {
  rel="noopener noreferrer"
  whileHover={{ scale: 1.05 }}
  whileTap={{ scale: 0.95 }}
- className="px-8 py-4 bg-white border-2 border-rose-200 text-gray-800 rounded-full font-medium hover:bg-rose-50 transition-all text-center"
+ className="cute-button px-8 py-4 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-500 text-white rounded-full font-medium hover:bg-rose-50 transition-all text-center"
  >
  🖼️ View Collection
  </motion.a>
@@ -251,7 +251,7 @@ export default function Home() {
  viewport={{ once: true }}
  transition={{ delay: index * 0.2 }}
  whileHover={{ y: -8, scale: 1.02 }}
- className={`bg-gradient-to-br ${story.gradient} rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all cursor-pointer border border-white/50`}
+ className={`cute-card bg-gradient-to-br ${story.gradient} rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all cursor-pointer border border-white/50`}
  >
  <div className="text-6xl mb-4 text-center">{story.emoji}</div>
  <h3 className="text-2xl font-bold mb-3 text-gray-800 text-center">{story.title}</h3>
@@ -294,7 +294,7 @@ export default function Home() {
  ☀️ Today - Day 10
  </h3>
  </div>
- <div className="bg-white rounded-b-2xl shadow-2xl p-6 border-x border-b border-rose-100">
+ <div className="cute-card bg-white rounded-b-2xl shadow-2xl p-6 border-x border-b border-rose-100">
  <div className="grid md:grid-cols-3 gap-6">
  {allPhotos.filter(p => p.day === 10).map((photo, idx) => (
  <motion.div
@@ -351,7 +351,7 @@ export default function Home() {
  📆 This Week - Days 4-10
  </h3>
  </div>
- <div className="bg-white rounded-b-2xl shadow-2xl p-6 border-x border-b border-pink-100">
+ <div className="cute-card bg-white rounded-b-2xl shadow-2xl p-6 border-x border-b border-pink-100">
  <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
  {[4, 5, 6, 7, 8, 9, 10].map((dayNum) => {
  const dayPhotos = allPhotos.filter(p => p.day === dayNum);
@@ -402,7 +402,7 @@ export default function Home() {
  📊 This Month - All 10 Days
  </h3>
  </div>
- <div className="bg-white rounded-b-2xl shadow-2xl p-6 border-x border-b border-purple-100">
+ <div className="cute-card bg-white rounded-b-2xl shadow-2xl p-6 border-x border-b border-purple-100">
  {/* Compact calendar grid */}
  <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-6">
  {[...Array(10)].map((_, idx) => {
@@ -513,7 +513,7 @@ export default function Home() {
  viewport={{ once: true }}
  transition={{ delay: index * 0.15 }}
  whileHover={{ x: 8 }}
- className="bg-white rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all border border-rose-100"
+ className="cute-card bg-white rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all border border-rose-100"
  >
  <div className="flex items-start gap-4">
  <div className="text-5xl">{phase.emoji}</div>
@@ -544,7 +544,7 @@ export default function Home() {
  initial={{ opacity: 0, y: 20 }}
  whileInView={{ opacity: 1, y: 0 }}
  viewport={{ once: true }}
- className="bg-gradient-to-br from-rose-100 to-pink-100 rounded-3xl p-8 md:p-12 text-center shadow-2xl border border-rose-200"
+ className="cute-card bg-gradient-to-br from-rose-100 to-pink-100 rounded-3xl p-8 md:p-12 text-center shadow-2xl border border-rose-200"
  >
  <div className="text-6xl mb-6">💝</div>
  <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-800">
@@ -569,6 +569,8 @@ export default function Home() {
  {[
  { name: 'OpenSea', url: 'https://opensea.io/collection/amirealsia', icon: SiOpensea, color: 'blue' },
  { name: 'Twitter', url: 'https://x.com/amirealsia', icon: FaTwitter, color: 'sky' },
+ { name: 'Farcaster', url: 'https://farcaster.xyz/amirealsia', icon: SiFarcaster, color: 'purple' },
+ { name: 'Truth Social', url: 'https://truthsocial.com/@amirealsia', icon: FaGlobe, color: 'red' },
  { name: 'Telegram', url: 'https://t.me/amirealsia', icon: FaTelegram, color: 'cyan' },
  { name: 'Discord', url: 'https://discord.gg/jX2uSWNd', icon: FaDiscord, color: 'indigo' },
  { name: 'Instagram', url: 'https://instagram.com/amirealsia', icon: FaInstagram, color: 'pink' },
@@ -587,9 +589,9 @@ export default function Home() {
  viewport={{ once: true }}
  transition={{ delay: index * 0.1 }}
  whileHover={{ scale: 1.05, y: -5 }}
- className="flex flex-col items-center gap-2 p-4 bg-white rounded-xl shadow-md hover:shadow-xl transition-all border border-gray-200"
+ className="cute-card flex flex-col items-center gap-2 p-4 bg-white rounded-xl shadow-md hover:shadow-xl transition-all border border-gray-200"
  >
- <social.icon className={`text-3xl text-${social.color}-500`} />
+ <social.icon className={`text-4xl text-${social.color}-500`} />
  <span className="font-medium text-sm text-gray-700">{social.name}</span>
  </motion.a>
  ))}
@@ -637,6 +639,12 @@ export default function Home() {
  </a>
  <a href="https://x.com/amirealsia" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-500 transition-colors" title="Twitter">
  <FaTwitter className="text-xl" />
+ </a>
+ <a href="https://farcaster.xyz/amirealsia" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-500 transition-colors" title="Farcaster">
+ <SiFarcaster className="text-xl" />
+ </a>
+ <a href="https://truthsocial.com/@amirealsia" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-500 transition-colors" title="Truth Social">
+ <FaGlobe className="text-xl" />
  </a>
  <a href="https://t.me/amirealsia" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rose-500 transition-colors" title="Telegram">
  <FaTelegram className="text-xl" />
