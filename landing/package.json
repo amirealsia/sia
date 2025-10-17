@@ -6,7 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "deploy": "npm run build && wrangler pages deploy out --project-name=sia --commit-dirty=true",
+    "deploy:preview": "npm run build && wrangler pages deploy out --project-name=sia --branch=preview --commit-dirty=true"
   },
   "dependencies": {
     "flag-icons": "^7.5.0",
