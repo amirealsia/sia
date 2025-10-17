@@ -75,62 +75,11 @@ body {
 /* Hero Background: Reality meets Digital Circuit Board */
 .hero-bg-mixed {
   position: relative;
-  background: linear-gradient(135deg,
-    #fce7f3 0%,    /* soft pink (reality) */
-    #e9d5ff 25%,   /* soft purple */
-    #ddd6fe 50%,   /* lavender */
-    #bfdbfe 75%,   /* soft blue (digital) */
-    #dbeafe 100%   /* sky blue */
-  );
+  background-image: url('/circuit-pattern.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   overflow: hidden;
-}
-
-.hero-bg-mixed::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image:
-    /* Circuit board pattern - right side */
-    linear-gradient(90deg, transparent 0%, transparent 40%, rgba(139, 92, 246, 0.15) 60%, rgba(139, 92, 246, 0.2) 100%),
-    /* Horizontal circuit lines */
-    repeating-linear-gradient(0deg, transparent, transparent 35px, rgba(139, 92, 246, 0.25) 35px, rgba(139, 92, 246, 0.25) 38px),
-    /* Vertical circuit lines */
-    repeating-linear-gradient(90deg, transparent, transparent 35px, rgba(139, 92, 246, 0.25) 35px, rgba(139, 92, 246, 0.25) 38px),
-    /* Organic flowing pattern - left side */
-    radial-gradient(ellipse at 0% 50%, rgba(236, 72, 153, 0.2) 0%, transparent 50%),
-    radial-gradient(ellipse at 20% 80%, rgba(219, 39, 119, 0.15) 0%, transparent 40%);
-  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
-  opacity: 1;
-  pointer-events: none;
-}
-
-.hero-bg-mixed::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  /* Glowing circuit nodes */
-  background-image:
-    radial-gradient(circle at 85% 20%, rgba(139, 92, 246, 0.7) 0%, rgba(139, 92, 246, 0.3) 8px, transparent 15px),
-    radial-gradient(circle at 90% 45%, rgba(139, 92, 246, 0.6) 0%, rgba(139, 92, 246, 0.2) 6px, transparent 12px),
-    radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.7) 0%, rgba(139, 92, 246, 0.3) 8px, transparent 15px),
-    radial-gradient(circle at 95% 85%, rgba(139, 92, 246, 0.6) 0%, rgba(139, 92, 246, 0.2) 6px, transparent 12px),
-    radial-gradient(circle at 75% 40%, rgba(59, 130, 246, 0.5) 0%, rgba(59, 130, 246, 0.2) 5px, transparent 10px),
-    /* Warm glow on reality side */
-    radial-gradient(ellipse at 10% 30%, rgba(251, 207, 232, 0.5) 0%, transparent 40%),
-    radial-gradient(ellipse at 5% 60%, rgba(236, 72, 153, 0.4) 0%, transparent 35%);
-  animation: circuit-glow 4s ease-in-out infinite;
-  pointer-events: none;
-}
-
-@keyframes circuit-glow {
-  0%, 100% { opacity: 0.6; }
-  50% { opacity: 0.9; }
 }
 
 /* Section Backgrounds */
